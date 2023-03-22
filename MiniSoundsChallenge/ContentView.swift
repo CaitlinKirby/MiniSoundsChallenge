@@ -32,34 +32,53 @@ struct HomeView: View {
     }
     
     
+    
+    struct MiniSoundsView: View {
+        
+        let config: Config
+        
+        var body: some View {
+            NavigationView {
+                ZStack {
+                    Text("BBC Mini Sounds")
+                    if(config.status.isOn == false) {
+                        // Popup box with a message how it isn't valid
+                        VStack {
+                            Text(config.status.title)
+                            Text(config.status.message)
+                            Link(config.status.linkTitle, destination: config.status.appStoreUrl).foregroundColor(.blue)
+                        }
+                        .padding(10)
+                        .background(.black.opacity(0.8))
+                        .foregroundColor(.white)
+                    }
+                }
+            }
+        }
+    }
+    
     var body: some View {
         NavigationView {
             VStack {
-                HStack {
-                    Button("Parse killed config 💀") {
-                        setupJSON(url: URL(string: "https://sounds-mobile-config.files.bbci.co.uk/ios/1.15.0/config.json")!)
-                    } .buttonStyle(.bordered)
-
-                    Button("Parse living config 🌱") {
-                        setupJSON(url: URL(string: "https://sounds-mobile-config.files.bbci.co.uk/ios/2.3.0/config.json")!)
-                    } .buttonStyle(.bordered)
+                NavigationLink(destination: MiniSoundsView(config: config).onAppear {
+                    setupJSON(url: URL(string: "https://sounds-mobile-config.files.bbci.co.uk/ios/1.15.0/config.json")!)
+                }) {
+                    Text("Parse killed config")
                 }
-                Spacer()
-                if (config.status.isOn == false) {
-                    VStack {
-                        Text(config.status.title)
-                        Text(config.status.message)
-                        Link(config.status.linkTitle, destination: config.status.appStoreUrl)
-                    }
-                } else {
-                    Text("Valid Config! 🎉")
+                .background(.red)
+                NavigationLink(destination: MiniSoundsView(config: config).onAppear {
+                    setupJSON(url: URL(string: "https://sounds-mobile-config.files.bbci.co.uk/ios/2.3.0/config.json")!)
+                }) {
+                    Text("Parse live config")
                 }
-                Spacer()
-                Spacer()
-
-            } .navigationTitle("Parse Time!")
+                .background(.green)
+            }
+            .navigationTitle("Config Selections")
+            .buttonStyle(.bordered)
+            .foregroundColor(.white)
         }
     }
+    
 }
 
 struct Config: Codable {
@@ -69,7 +88,7 @@ struct Config: Codable {
 
 struct Status: Codable {
     var isOn: Bool = false
-    var title: String = "Defualt"
+    var title: String = "Default"
     var message: String = "Invalid Config"
     var linkTitle: String = "Link"
     var appStoreUrl: URL = URL(string:"www.bbc.co.uk")!
