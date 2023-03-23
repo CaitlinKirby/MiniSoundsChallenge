@@ -31,8 +31,6 @@ struct HomeView: View {
         task.resume()
     }
     
-    
-    
     struct MiniSoundsView: View {
         
         let config: Config
@@ -40,19 +38,25 @@ struct HomeView: View {
         var body: some View {
             NavigationView {
                 ZStack {
-                    Text("BBC Mini Sounds")
-                    if(config.status.isOn == false) {
-                        // Popup box with a message how it isn't valid
-                        VStack {
-                            Text(config.status.title)
-                            Text(config.status.message)
-                            Link(config.status.linkTitle, destination: config.status.appStoreUrl).foregroundColor(.blue)
+                    Group {
+                        Text("Welcome to Mini Sounds!")
+                    } .accessibilityHidden(config.status.isOn ? false : true)
+                    Group {
+                        if(config.status.isOn == false) {
+                            // Popup box with a message how it isn't valid
+                            VStack {
+                                Text(config.status.title)
+                                Text(config.status.message)
+                                Link(config.status.linkTitle, destination: config.status.appStoreUrl).foregroundColor(.blue)
+                            }
+                            .padding(10)
+                            .background(.black.opacity(0.75))
+                            .foregroundColor(.white)
                         }
-                        .padding(10)
-                        .background(.black.opacity(0.8))
-                        .foregroundColor(.white)
                     }
                 }
+                .navigationTitle("BBC Mini Sounds")
+                .navigationBarTitleDisplayMode(.inline)
             }
         }
     }
