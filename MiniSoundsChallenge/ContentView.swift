@@ -48,7 +48,8 @@ struct HomeView: View {
                                 Text(config.status.title)
                                 Text(config.status.message)
                                 Link(config.status.linkTitle, destination: config.status.appStoreUrl).foregroundColor(.blue)
-                            }
+                            } .accessibilityElement(children: .combine) // Read out all as one rather than individual links
+                            .accessibilityLabel(Text("\(config.status.title)  \(config.status.message) \(config.status.linkTitle)"))
                             .padding(10)
                             .background(.black.opacity(0.75))
                             .foregroundColor(.white)
@@ -74,6 +75,7 @@ struct HomeView: View {
                     setupJSON(url: URL(string: "https://sounds-mobile-config.files.bbci.co.uk/ios/2.3.0/config.json")!)
                 }) {
                     Text("Parse live config")
+                        .accessibilityLabel(Text("Parse lyve config"))// Use "ii" to make it read the word proper
                 }
                 .background(.green)
             }
