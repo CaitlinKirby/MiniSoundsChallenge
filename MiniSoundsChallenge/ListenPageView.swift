@@ -1,0 +1,98 @@
+//
+//  ListenPageView.swift
+//  MiniSoundsChallenge
+//
+//  Created by Caitlin Kirby on 28/03/2023.
+//
+
+import SwiftUI
+
+struct ListenPageView: View {
+    
+    let configUrl: URL
+    @State private var config = Config()
+    @State private var stations = Stations()
+    
+    func setupConfigJSON() {
+        let task = URLSession.shared.dataTask(with: configUrl) { data, response, error in
+            if let data = data {
+                let decoder = JSONDecoder()
+                do {
+                    let decoded = try decoder.decode(Config.self, from: data)
+                    config = decoded
+                    setupDataJSON(url: URL(string: "\(config.rmsConfig.rootUrl)\(config.rmsConfig.allStationsPath)")!)
+                } catch {
+                    print("Failed to decode Config JSON")
+                }
+            }
+            else if let error = error {
+                print("Request failed: \(error)")
+            }
+        }
+        task.resume()
+    }
+    
+    func setupDataJSON(url: URL) {
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            if let data = data {
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                
+                do {
+                    let decoded = try decoder.decode(Stations.self, from: data)
+                    stations = decoded
+                } catch {
+                    print("Failed to decode Data JSON")
+                }
+            }
+            else if let error = error {
+                print("Request failed: \(error)")
+            }
+        }
+        task.resume()
+    }
+    
+    
+    var body: some View {
+        NavigationView {
+            ZStack {
+                Group {
+                    if(stations.data.count > 0) {
+                        VStack {
+                            ForEach(stations.data[0].data, id: \.id) { station in
+                                Text(station.titles.primary)
+                            }
+                        }
+                    }
+                } .accessibilityHidden(config.status.isOn ? false : true)
+                Group {
+                    if(config.status.isOn == false) {
+                        // Popup box with a message how it isn't valid
+                        VStack {
+                            Text(config.status.title)
+                            Text(config.status.message)
+                            Link(config.status.linkTitle, destination: config.status.appStoreUrl).foregroundColor(.blue)
+                        } .accessibilityElement(children: .combine) // Read out all as one rather than individual links
+                            .accessibilityLabel(Text("\(config.status.title)  \(config.status.message) \(config.status.linkTitle)"))
+                            .padding(10)
+                            .background(.black.opacity(0.75))
+                            .foregroundColor(.white)
+                    }
+                }
+            }
+            .navigationTitle("BBC Mini Sounds")
+            .navigationBarTitleDisplayMode(.inline)
+            .onAppear {
+                setupConfigJSON()
+            }
+        }
+        
+    }
+    
+}
+
+//struct ListenPageView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ListenPageView()
+//    }
+//}

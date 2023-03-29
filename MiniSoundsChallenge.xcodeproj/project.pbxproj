@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C65FE7A29D2EE1C00BDFF69 /* ListenPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C65FE7929D2EE1C00BDFF69 /* ListenPageView.swift */; };
 		2C8B378C29B74D8300E1D5CF /* MiniSoundsChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B378B29B74D8300E1D5CF /* MiniSoundsChallengeApp.swift */; };
 		2C8B378E29B74D8300E1D5CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B378D29B74D8300E1D5CF /* ContentView.swift */; };
 		2C8B379029B74D8400E1D5CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C8B378F29B74D8400E1D5CF /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C65FE7929D2EE1C00BDFF69 /* ListenPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenPageView.swift; sourceTree = "<group>"; };
 		2C8B378829B74D8300E1D5CF /* MiniSoundsChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniSoundsChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8B378B29B74D8300E1D5CF /* MiniSoundsChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniSoundsChallengeApp.swift; sourceTree = "<group>"; };
 		2C8B378D29B74D8300E1D5CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			children = (
 				2C8B378B29B74D8300E1D5CF /* MiniSoundsChallengeApp.swift */,
 				2C8B378D29B74D8300E1D5CF /* ContentView.swift */,
+				2C65FE7929D2EE1C00BDFF69 /* ListenPageView.swift */,
 				2C8B378F29B74D8400E1D5CF /* Assets.xcassets */,
 				2C8B379129B74D8400E1D5CF /* Preview Content */,
 			);
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C65FE7A29D2EE1C00BDFF69 /* ListenPageView.swift in Sources */,
 				2C8B378E29B74D8300E1D5CF /* ContentView.swift in Sources */,
 				2C8B378C29B74D8300E1D5CF /* MiniSoundsChallengeApp.swift in Sources */,
 			);
