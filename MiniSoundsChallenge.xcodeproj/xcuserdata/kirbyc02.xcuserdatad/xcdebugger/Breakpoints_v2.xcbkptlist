@@ -7,48 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F67763C8-EF67-44AB-B85B-E37411AC5AE7"
+            uuid = "7583E97F-6574-4318-90CD-463D3F2F329E"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MiniSoundsChallenge/ListenPageView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "74119268-1A1A-41E7-AC42-0A2187B14B9C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MiniSoundsChallenge/ListenPageView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "setupDataJSON(url:)"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "setupConfigJSON()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F0599BF1-658D-4E1A-A9F1-B31DB5CA9BC3"
+            uuid = "60E24B60-9B8B-4F27-A85C-9C66C7DBFF22"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MiniSoundsChallenge/ListenPageView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "setupDataJSON(url:)"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "setupConfigJSON()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

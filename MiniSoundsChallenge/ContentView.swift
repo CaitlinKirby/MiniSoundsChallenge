@@ -57,6 +57,7 @@ struct Stations: Codable {
     struct Module: Codable {
         var title: String = "Missing Data"
         var data: [StationData] = [StationData]()
+        var id: String
             
         struct StationData: Codable {
             var id: String = "Default"
