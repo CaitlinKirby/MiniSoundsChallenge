@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_MiniSoundsChallenge_MiniSoundsChallengeUITests : NSObject
+@end
+@implementation PodsDummy_Pods_MiniSoundsChallenge_MiniSoundsChallengeUITests
+@end

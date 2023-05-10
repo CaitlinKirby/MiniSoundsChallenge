@@ -1,0 +1,6 @@
+framework module Pods_MiniSoundsChallenge_MiniSoundsChallengeUITests {
+  umbrella header "Pods-MiniSoundsChallenge-MiniSoundsChallengeUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
