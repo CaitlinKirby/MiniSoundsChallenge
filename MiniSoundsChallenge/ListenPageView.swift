@@ -88,6 +88,9 @@ struct ListenPageView: View {
                     .frame(maxWidth: 150, minHeight: 50)
                     .padding(.bottom, 20)
             }.accessibilityLabel(Text("\(station.titles.primary).  \(station.synopses.short)"))
+                .onTapGesture {
+                    print("tapped \(station.titles.primary)")
+                }
         }
     }
     
@@ -126,7 +129,6 @@ struct ListenPageView: View {
                 } .accessibilityHidden(config.status.isOn ? false : true)
                 Group {
                     if(config.status.isOn == false) {
-                        // Popup box with a message how it isn't valid
                         VStack {
                             Text(config.status.title)
                             Text(config.status.message)
@@ -147,9 +149,3 @@ struct ListenPageView: View {
     }
     
 }
-
-//struct ListenPageView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ListenPageView()
-//    }
-//}
