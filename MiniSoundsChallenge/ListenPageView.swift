@@ -8,48 +8,9 @@
 import SwiftUI
 
 struct ListenPageView: View {
-    let configUrl: URL
-    @State private var config = Config()
-    @State private var stations = Stations()
     
-    func setupConfigJSON() {
-        let task = URLSession.shared.dataTask(with: configUrl) { data, response, error in
-            if let data = data {
-                let decoder = JSONDecoder()
-                do {
-                    let decoded = try decoder.decode(Config.self, from: data)
-                    config = decoded
-                    setupDataJSON(url: URL(string: "\(config.rmsConfig.rootUrl)\(config.rmsConfig.allStationsPath)")!)
-                } catch {
-                    print("Failed to decode Config JSON")
-                }
-            }
-            else if let error = error {
-                print("Request failed: \(error)")
-            }
-        }
-        task.resume()
-    }
-    func setupDataJSON(url: URL) {
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            if let data = data {
-                let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
-                
-                do {
-                    let decoded = try decoder.decode(Stations.self, from: data)
-                    stations = decoded
-                } catch {
-                    print("Failed to decode Data JSON")
-                }
-            }
-            else if let error = error {
-                print("Request failed: \(error)")
-            }
-        }
-        task.resume()
-    }
-    
+    @ObservedObject var viewModel: ViewModel
+    @State var smpVideoView: UIView?
     
     struct RadioIcon: View {
         var station: Stations.Module.StationData
@@ -75,6 +36,7 @@ struct ListenPageView: View {
     
     struct StationSquare: View {
         var station: Stations.Module.StationData
+        var tapped: () -> Void
         
         var body: some View {
             VStack {
@@ -89,7 +51,7 @@ struct ListenPageView: View {
                     .padding(.bottom, 20)
             }.accessibilityLabel(Text("\(station.titles.primary).  \(station.synopses.short)"))
                 .onTapGesture {
-                    print("tapped \(station.titles.primary)")
+                    tapped()
                 }
         }
     }
@@ -105,47 +67,121 @@ struct ListenPageView: View {
         }
     }
     
+    struct UpdateWarning: View {
+        let title: String
+        let message: String
+        let linkTitle: String
+        let appStoreUrl: URL
+        
+        var body: some View {
+            VStack {
+                Text(title)
+                Text(message)
+                Link(linkTitle, destination: appStoreUrl).foregroundColor(.blue)
+            } .accessibilityElement(children: .combine)
+                .accessibilityLabel(Text("\(title)  \(message) \(linkTitle)"))
+                .padding(10)
+                .background(.black.opacity(0.75))
+                .foregroundColor(.white)
+        }
+    }
+    
     
     var body: some View {
         NavigationView {
-            ZStack {
-                Group {
-                    if(stations.data.count > 0) {
-                        ScrollView(.vertical) {
-                            ForEach(stations.data, id: \.id) { stationGroup in
-                                VStack {
-                                    RailHeading(text: stationGroup.title)
-                                    ScrollView(.horizontal) {
-                                        HStack {
-                                            ForEach(stationGroup.data, id: \.id) { station in
-                                                StationSquare(station: station)
-                                            } .padding(.trailing, 20)
+            VStack {
+                SMPView(smpVideoView: smpVideoView)
+                ZStack {
+                    Group {
+                        if(viewModel.stations.data.count > 0) {
+                            
+                            ScrollView(.vertical) {
+                                ForEach(viewModel.stations.data, id: \.id) { stationGroup in
+                                    VStack {
+                                        RailHeading(text: stationGroup.title)
+                                        ScrollView(.horizontal) {
+                                            HStack {
+                                                ForEach(stationGroup.data, id: \.id) { station in
+                                                    StationSquare(station: station) {
+                                                        viewModel.loadSMP(id: station.id)
+                                                        smpVideoView = viewModel.smpView
+                                                    }
+                                                } .padding(.trailing, 20)
+                                            }
                                         }
                                     }
                                 }
                             }
                         }
-                    }
-                } .accessibilityHidden(config.status.isOn ? false : true)
-                Group {
-                    if(config.status.isOn == false) {
-                        VStack {
-                            Text(config.status.title)
-                            Text(config.status.message)
-                            Link(config.status.linkTitle, destination: config.status.appStoreUrl).foregroundColor(.blue)
-                        } .accessibilityElement(children: .combine) // Read out all as one rather than individual links
-                            .accessibilityLabel(Text("\(config.status.title)  \(config.status.message) \(config.status.linkTitle)"))
-                            .padding(10)
-                            .background(.black.opacity(0.75))
-                            .foregroundColor(.white)
+                    } .accessibilityHidden(viewModel.config.status.isOn ? false : true)
+                    Group {
+                        if(viewModel.config.status.isOn == false) {
+                            UpdateWarning(
+                                title: viewModel.config.status.title,
+                                message: viewModel.config.status.message,
+                                linkTitle: viewModel.config.status.linkTitle,
+                                appStoreUrl: viewModel.config.status.appStoreUrl
+                            )
+                        }
                     }
                 }
             }
             .navigationTitle("BBC Mini Sounds")
             .onAppear {
-                setupConfigJSON()
+                Task {
+                    await viewModel.setupConfigJSON()
+                }
             }
         }
     }
     
+}
+
+class SMPUIView: UIView {
+
+    var videoView: UIView? {
+        didSet {
+            updateVideoView(oldVideoView: oldValue)
+        }
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupView()
+    }
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupView()
+    }
+
+    convenience init(videoView: UIView?) {
+        self.init(frame: .zero)
+        self.videoView = videoView
+    }
+
+    private func setupView() {
+        updateVideoView(oldVideoView: nil)
+    }
+
+    private func updateVideoView(oldVideoView: UIView?) {
+        oldVideoView?.removeFromSuperview()
+        guard let videoView = videoView else { return }
+        videoView.frame = self.bounds
+        self.addSubview(videoView)
+    }
+}
+
+struct SMPView: UIViewRepresentable {
+
+    var smpVideoView: UIView?
+
+    func makeUIView(context: Context) -> UIView {
+        return SMPUIView(videoView: smpVideoView)
+    }
+
+    func updateUIView(_ uiView: UIView, context: Context) {
+        guard let uiView = uiView as? SMPUIView else { return }
+        uiView.videoView = smpVideoView
+    }
 }

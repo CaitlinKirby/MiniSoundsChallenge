@@ -12,11 +12,11 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             VStack {
-                NavigationLink(destination: ListenPageView(configUrl: URL(string: "https://sounds-mobile-config.files.bbci.co.uk/ios/1.15.0/config.json")!)) {
+                NavigationLink(destination: ListenPageView(viewModel: ViewModel(configUrl: URL(string: "https://sounds-mobile-config.files.bbci.co.uk/ios/1.15.0/config.json")!))) {
                     Text("Parse killed config")
                 }
                 .background(.red)
-                NavigationLink(destination: ListenPageView(configUrl: URL(string: "https://sounds-mobile-config.files.bbci.co.uk/ios/2.3.0/config.json")!)) {
+                NavigationLink(destination: ListenPageView(viewModel: ViewModel(configUrl: URL(string: "https://sounds-mobile-config.files.bbci.co.uk/ios/2.3.0/config.json")!))) {
                     Text("Parse live config")
                         .accessibilityLabel(Text("Parse lyve config"))
                 }

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "F05C59A3-4DDD-40D7-9321-0C0B1FFEE514"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "29023D6C-DE63-4CE6-A245-679E5075795E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MiniSoundsChallenge/ListenPageView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "30965070-706A-4A3D-B0BF-525F519BA10B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MiniSoundsChallenge/ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "setupConfigJSON()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "60FFFC49-F4AC-4C5E-B59D-E577AE823CA7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MiniSoundsChallenge/ListenPageView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "60FFFC49-F4AC-4C5E-B59D-E577AE823CA7 - f4cce46cb73e2a7d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; Swift.Optional&lt;SwiftUI.ScrollView&lt;SwiftUI.ForEach&lt;Swift.Array&lt;MiniSoundsChallenge.Stations.Module&gt;, Swift.String, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(MiniSoundsChallenge.ListenPageView.RailHeading, SwiftUI.ScrollView&lt;SwiftUI.HStack&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;&gt;)&gt;&gt;&gt;&gt;&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ModifiedContent&lt;SwiftUI.Group&lt;Swift.Optional&lt;SwiftUI.ScrollView&lt;SwiftUI.ForEach&lt;Swift.Array&lt;MiniSoundsChallenge.Stations.Module&gt;, Swift.String, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(MiniSoundsChallenge.ListenPageView.RailHeading, SwiftUI.ScrollView&lt;SwiftUI.HStack&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;&gt;)&gt;&gt;&gt;&gt;&gt;&gt;, SwiftUI.AccessibilityAttachmentModifier&gt;, SwiftUI.Group&lt;Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0&gt;&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in MiniSoundsChallenge.ListenPageView.body.getter : some"
+                  moduleName = "MiniSoundsChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirbyc02/sounds-mobile/MiniSoundsChallenges/MiniSoundsChallenge/MiniSoundsChallenge/ListenPageView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "276">
+               </Location>
+               <Location
+                  uuid = "60FFFC49-F4AC-4C5E-B59D-E577AE823CA7 - f4cce46cb73e2a7d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; Swift.Optional&lt;SwiftUI.ScrollView&lt;SwiftUI.ForEach&lt;Swift.Array&lt;MiniSoundsChallenge.Stations.Module&gt;, Swift.String, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(MiniSoundsChallenge.ListenPageView.RailHeading, SwiftUI.ScrollView&lt;SwiftUI.HStack&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;&gt;)&gt;&gt;&gt;&gt;&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ModifiedContent&lt;SwiftUI.Group&lt;Swift.Optional&lt;SwiftUI.ScrollView&lt;SwiftUI.ForEach&lt;Swift.Array&lt;MiniSoundsChallenge.Stations.Module&gt;, Swift.String, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(MiniSoundsChallenge.ListenPageView.RailHeading, SwiftUI.ScrollView&lt;SwiftUI.HStack&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;&gt;)&gt;&gt;&gt;&gt;&gt;&gt;, SwiftUI.AccessibilityAttachmentModifier&gt;, SwiftUI.Group&lt;Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0&gt;&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in MiniSoundsChallenge.ListenPageView.body.getter : some"
+                  moduleName = "MiniSoundsChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirbyc02/sounds-mobile/MiniSoundsChallenges/MiniSoundsChallenge/MiniSoundsChallenge/ListenPageView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "296">
+               </Location>
+               <Location
+                  uuid = "60FFFC49-F4AC-4C5E-B59D-E577AE823CA7 - 752719a5af5b0308"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; Swift.Optional&lt;SwiftUI.TupleView&lt;(MiniSoundsChallenge.SMPView, SwiftUI.ScrollView&lt;SwiftUI.ForEach&lt;Swift.Array&lt;MiniSoundsChallenge.Stations.Module&gt;, Swift.String, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(MiniSoundsChallenge.ListenPageView.RailHeading, SwiftUI.ScrollView&lt;SwiftUI.HStack&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;&gt;)&gt;&gt;&gt;&gt;)&gt;&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ModifiedContent&lt;SwiftUI.Group&lt;Swift.Optional&lt;SwiftUI.TupleView&lt;(MiniSoundsChallenge.SMPView, SwiftUI.ScrollView&lt;SwiftUI.ForEach&lt;Swift.Array&lt;MiniSoundsChallenge.Stations.Module&gt;, Swift.String, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(MiniSoundsChallenge.ListenPageView.RailHeading, SwiftUI.ScrollView&lt;SwiftUI.HStack&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;&gt;)&gt;&gt;&gt;&gt;)&gt;&gt;&gt;, SwiftUI.AccessibilityAttachmentModifier&gt;, SwiftUI.Group&lt;Swift.Optional&lt;MiniSoundsChallenge.ListenPageView.UpdateWarning&gt;&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in MiniSoundsChallenge.ListenPageView.body.getter : some"
+                  moduleName = "MiniSoundsChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirbyc02/sounds-mobile/MiniSoundsChallenges/MiniSoundsChallenge/MiniSoundsChallenge/ListenPageView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "372">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D9700CB7-747E-4B7D-8C69-D48204420431"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MiniSoundsChallenge/ListenPageView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "D9700CB7-747E-4B7D-8C69-D48204420431 - 98cf7d6dcd232949"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ModifiedContent&lt;SwiftUI.Group&lt;Swift.Optional&lt;SwiftUI.ScrollView&lt;SwiftUI.ForEach&lt;Swift.Array&lt;MiniSoundsChallenge.Stations.Module&gt;, Swift.String, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(MiniSoundsChallenge.ListenPageView.RailHeading, SwiftUI.ScrollView&lt;SwiftUI.HStack&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;&gt;)&gt;&gt;&gt;&gt;&gt;&gt;, SwiftUI.AccessibilityAttachmentModifier&gt;, SwiftUI.Group&lt;Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0&gt;&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in MiniSoundsChallenge.ListenPageView.body.getter : some"
+                  moduleName = "MiniSoundsChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirbyc02/sounds-mobile/MiniSoundsChallenges/MiniSoundsChallenge/MiniSoundsChallenge/ListenPageView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "396">
+               </Location>
+               <Location
+                  uuid = "D9700CB7-747E-4B7D-8C69-D48204420431 - f4cce46cb73e286d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; Swift.Optional&lt;SwiftUI.ScrollView&lt;SwiftUI.ForEach&lt;Swift.Array&lt;MiniSoundsChallenge.Stations.Module&gt;, Swift.String, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(MiniSoundsChallenge.ListenPageView.RailHeading, SwiftUI.ScrollView&lt;SwiftUI.HStack&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;&gt;)&gt;&gt;&gt;&gt;&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ModifiedContent&lt;SwiftUI.Group&lt;Swift.Optional&lt;SwiftUI.ScrollView&lt;SwiftUI.ForEach&lt;Swift.Array&lt;MiniSoundsChallenge.Stations.Module&gt;, Swift.String, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(MiniSoundsChallenge.ListenPageView.RailHeading, SwiftUI.ScrollView&lt;SwiftUI.HStack&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;&gt;)&gt;&gt;&gt;&gt;&gt;&gt;, SwiftUI.AccessibilityAttachmentModifier&gt;, SwiftUI.Group&lt;Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0&gt;&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in MiniSoundsChallenge.ListenPageView.body.getter : some"
+                  moduleName = "MiniSoundsChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirbyc02/sounds-mobile/MiniSoundsChallenges/MiniSoundsChallenge/MiniSoundsChallenge/ListenPageView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "828">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DA56CCBE-F0A3-4574-8689-491058664811"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MiniSoundsChallenge/ListenPageView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "DA56CCBE-F0A3-4574-8689-491058664811 - db4453e09dc67107"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ModifiedContent&lt;SwiftUI.Group&lt;Swift.Optional&lt;SwiftUI.ScrollView&lt;SwiftUI.ForEach&lt;Swift.Array&lt;MiniSoundsChallenge.Stations.Module&gt;, Swift.String, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(MiniSoundsChallenge.ListenPageView.RailHeading, SwiftUI.ScrollView&lt;SwiftUI.HStack&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;&gt;)&gt;&gt;&gt;&gt;&gt;&gt;, SwiftUI.AccessibilityAttachmentModifier&gt;, SwiftUI.Group&lt;Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0&gt;&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in MiniSoundsChallenge.ListenPageView.body.getter : some"
+                  moduleName = "MiniSoundsChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirbyc02/sounds-mobile/MiniSoundsChallenges/MiniSoundsChallenge/MiniSoundsChallenge/ListenPageView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "860">
+               </Location>
+               <Location
+                  uuid = "DA56CCBE-F0A3-4574-8689-491058664811 - db4453e09dc67107"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ModifiedContent&lt;SwiftUI.Group&lt;Swift.Optional&lt;SwiftUI.ScrollView&lt;SwiftUI.ForEach&lt;Swift.Array&lt;MiniSoundsChallenge.Stations.Module&gt;, Swift.String, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(MiniSoundsChallenge.ListenPageView.RailHeading, SwiftUI.ScrollView&lt;SwiftUI.HStack&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;&gt;)&gt;&gt;&gt;&gt;&gt;&gt;, SwiftUI.AccessibilityAttachmentModifier&gt;, SwiftUI.Group&lt;Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0&gt;&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in MiniSoundsChallenge.ListenPageView.body.getter : some"
+                  moduleName = "MiniSoundsChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirbyc02/sounds-mobile/MiniSoundsChallenges/MiniSoundsChallenge/MiniSoundsChallenge/ListenPageView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "2764">
+               </Location>
+               <Location
+                  uuid = "DA56CCBE-F0A3-4574-8689-491058664811 - db4453e09dc67107"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ModifiedContent&lt;SwiftUI.Group&lt;Swift.Optional&lt;SwiftUI.ScrollView&lt;SwiftUI.ForEach&lt;Swift.Array&lt;MiniSoundsChallenge.Stations.Module&gt;, Swift.String, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(MiniSoundsChallenge.ListenPageView.RailHeading, SwiftUI.ScrollView&lt;SwiftUI.HStack&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;&gt;)&gt;&gt;&gt;&gt;&gt;&gt;, SwiftUI.AccessibilityAttachmentModifier&gt;, SwiftUI.Group&lt;Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0&gt;&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in MiniSoundsChallenge.ListenPageView.body.getter : some"
+                  moduleName = "MiniSoundsChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirbyc02/sounds-mobile/MiniSoundsChallenges/MiniSoundsChallenge/MiniSoundsChallenge/ListenPageView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "892">
+               </Location>
+               <Location
+                  uuid = "DA56CCBE-F0A3-4574-8689-491058664811 - db4453e09dc67107"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ModifiedContent&lt;SwiftUI.Group&lt;Swift.Optional&lt;SwiftUI.ScrollView&lt;SwiftUI.ForEach&lt;Swift.Array&lt;MiniSoundsChallenge.Stations.Module&gt;, Swift.String, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(MiniSoundsChallenge.ListenPageView.RailHeading, SwiftUI.ScrollView&lt;SwiftUI.HStack&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;&gt;)&gt;&gt;&gt;&gt;&gt;&gt;, SwiftUI.AccessibilityAttachmentModifier&gt;, SwiftUI.Group&lt;Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0&gt;&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in MiniSoundsChallenge.ListenPageView.body.getter : some"
+                  moduleName = "MiniSoundsChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirbyc02/sounds-mobile/MiniSoundsChallenges/MiniSoundsChallenge/MiniSoundsChallenge/ListenPageView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "2936">
+               </Location>
+               <Location
+                  uuid = "DA56CCBE-F0A3-4574-8689-491058664811 - 98cd8e47272720e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; Swift.Optional&lt;MiniSoundsChallenge.ListenPageView.UpdateWarning&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ModifiedContent&lt;SwiftUI.Group&lt;Swift.Optional&lt;SwiftUI.TupleView&lt;(MiniSoundsChallenge.SMPView, SwiftUI.ScrollView&lt;SwiftUI.ForEach&lt;Swift.Array&lt;MiniSoundsChallenge.Stations.Module&gt;, Swift.String, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(MiniSoundsChallenge.ListenPageView.RailHeading, SwiftUI.ScrollView&lt;SwiftUI.HStack&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;&gt;)&gt;&gt;&gt;&gt;)&gt;&gt;&gt;, SwiftUI.AccessibilityAttachmentModifier&gt;, SwiftUI.Group&lt;Swift.Optional&lt;MiniSoundsChallenge.ListenPageView.UpdateWarning&gt;&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0 in MiniSoundsChallenge.ListenPageView.body.getter : some"
+                  moduleName = "MiniSoundsChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirbyc02/sounds-mobile/MiniSoundsChallenges/MiniSoundsChallenge/MiniSoundsChallenge/ListenPageView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "516">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0F20F8DF-4D3C-4A23-8936-6E7A94B3D861"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MiniSoundsChallenge/ListenPageView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
