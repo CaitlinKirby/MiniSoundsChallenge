@@ -63,6 +63,7 @@
 		6CC24EDC06C1BE23E079E0D4 /* Pods_MiniSoundsChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniSoundsChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71015D64E762E5F7F1CCD3DB /* Pods-MiniSoundsChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniSoundsChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-MiniSoundsChallengeTests/Pods-MiniSoundsChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		82B9825ABB9316D466E5FC41 /* Pods_MiniSoundsChallenge_MiniSoundsChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniSoundsChallenge_MiniSoundsChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		835C56562A38BB6A00E212D7 /* Notes.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Notes.md; sourceTree = "<group>"; };
 		96CB245EC7519C9360F29D8B /* Pods_MiniSoundsChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniSoundsChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA66ECA88F4D868C06EBBEFB /* Pods-MiniSoundsChallenge-MiniSoundsChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniSoundsChallenge-MiniSoundsChallengeUITests.release.xcconfig"; path = "Target Support Files/Pods-MiniSoundsChallenge-MiniSoundsChallengeUITests/Pods-MiniSoundsChallenge-MiniSoundsChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CE149238B155803B8AC20C04 /* Pods-MiniSoundsChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniSoundsChallenge.debug.xcconfig"; path = "Target Support Files/Pods-MiniSoundsChallenge/Pods-MiniSoundsChallenge.debug.xcconfig"; sourceTree = "<group>"; };
@@ -122,14 +123,15 @@
 			isa = PBXGroup;
 			children = (
 				2C8B378F29B74D8400E1D5CF /* Assets.xcassets */,
+				2C8B378B29B74D8300E1D5CF /* MiniSoundsChallengeApp.swift */,
 				2C8B378D29B74D8300E1D5CF /* ContentView.swift */,
 				2C65FE7929D2EE1C00BDFF69 /* ListenPageView.swift */,
-				2C8B378B29B74D8300E1D5CF /* MiniSoundsChallengeApp.swift */,
 				2C82908B2A288E6400F33168 /* ListenPageViewModel.swift */,
 				2C8B379129B74D8400E1D5CF /* Preview Content */,
 				2CA0F3332A333159005030F0 /* MyAvStatisticsConsumer.swift */,
 				2C838A4D2A37592D007307A4 /* StationSquareView.swift */,
 				2C838A4F2A375955007307A4 /* StationSquareViewModel.swift */,
+				835C56562A38BB6A00E212D7 /* Notes.md */,
 			);
 			path = MiniSoundsChallenge;
 			sourceTree = "<group>";
