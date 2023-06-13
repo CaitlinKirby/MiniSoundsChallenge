@@ -31,38 +31,44 @@ struct ListenPageView: View {
         }
     }
     
+    struct Rail: View {
+        let stationGroup: Stations.Module
+        let listenPageViewModel: ListenPageViewModel
+        
+        var body: some View {
+            VStack {
+                Text(stationGroup.title)
+                    .font(.title2)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(10)
+                ScrollView(.horizontal) {
+                    HStack {
+                        ForEach(stationGroup.data, id: \.id) { station in
+                            StationSquareView(viewModel: StationSquareViewModel(
+                                id: station.id,
+                                title: station.titles.primary,
+                                subtitle: station.synopses.short,
+                                imageUrl: station.imageUrl))
+                                .onTapGesture {
+                                    listenPageViewModel.currrentlyPlayingStationID = station.id
+                                }
+                            
+                        } .padding(.trailing, 20)
+                    }
+                }
+            }
+        }
+    }
+    
     var body: some View {
         NavigationView {
             VStack {
-                // SMPView(smpVideoView: smpVideoView)
                 ZStack {
                     Group {
                         if(listenPageViewModel.stations.data.count > 0) {
                             ScrollView(.vertical) {
                                 ForEach(listenPageViewModel.stations.data, id: \.id) { stationGroup in
-                                    VStack {
-                                        Text(stationGroup.title)
-                                            .font(.title2)
-                                            .frame(maxWidth: .infinity, alignment: .leading)
-                                            .padding(10)
-                                        ScrollView(.horizontal) {
-                                            HStack {
-                                                ForEach(stationGroup.data, id: \.id) { station in
-                                                    StationSquareView(viewModel: StationSquareViewModel(
-                                                        id: station.id,
-                                                        title: station.titles.primary,
-                                                        subtitle: station.synopses.short,
-                                                        imageUrl: station.imageUrl))
-                                                        .onTapGesture {
-                                                            listenPageViewModel.currrentlyPlayingStationID = station.id
-                                                            // listenPageViewModel.loadSMP(id: station.id)
-                                                            smpVideoView = listenPageViewModel.smpView
-                                                        }
-                                                    
-                                                } .padding(.trailing, 20)
-                                            }
-                                        }
-                                    }
+                                    Rail(stationGroup: stationGroup, listenPageViewModel: listenPageViewModel)
                                 }
                             }
                         }
@@ -88,53 +94,4 @@ struct ListenPageView: View {
         }
     }
     
-}
-
-class SMPUIView: UIView {
-
-    var videoView: UIView? {
-        didSet {
-            updateVideoView(oldVideoView: oldValue)
-        }
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setupView()
-    }
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupView()
-    }
-
-    convenience init(videoView: UIView?) {
-        self.init(frame: .zero)
-        self.videoView = videoView
-    }
-
-    private func setupView() {
-        updateVideoView(oldVideoView: nil)
-    }
-
-    private func updateVideoView(oldVideoView: UIView?) {
-        oldVideoView?.removeFromSuperview()
-        guard let videoView = videoView else { return }
-        videoView.frame = self.bounds
-        self.addSubview(videoView)
-    }
-}
-
-struct SMPView: UIViewRepresentable {
-
-    var smpVideoView: UIView?
-
-    func makeUIView(context: Context) -> UIView {
-        return SMPUIView(videoView: smpVideoView)
-    }
-
-    func updateUIView(_ uiView: UIView, context: Context) {
-        guard let uiView = uiView as? SMPUIView else { return }
-        uiView.videoView = smpVideoView
-    }
 }
