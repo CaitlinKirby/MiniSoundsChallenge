@@ -9,12 +9,19 @@ import Foundation
 import UIKit
 import SMP
 
-class ViewModel: ObservableObject {
+class ListenPageViewModel: ObservableObject {
     
     private let configUrl: URL
     @Published var config: Config
     @Published var stations: Stations
     var smpView: UIView?
+    var currrentlyPlayingStationID: String? {
+        didSet {
+            if let currrentlyPlayingStationID {
+                loadSMP(id: currrentlyPlayingStationID)
+            }
+        }
+    }
     
     init(configUrl: URL) {
         self.configUrl = configUrl
@@ -22,13 +29,11 @@ class ViewModel: ObservableObject {
         self.stations = Stations()
     }
     
-    func loadSMP(id: String) {
+    private func loadSMP(id: String) {
         var builder = BBCSMPPlayerBuilder()
         builder = builder.withInterruptionEndedBehaviour(.autoresume)
         let smp = builder.build()
-        
-        print(id)
-         
+                 
         let playerItemProvider = MediaSelectorItemProviderBuilder(VPID: id, mediaSet: "mobile-phone-main", AVType: .audio, streamType: .simulcast, avStatisticsConsumer: MyAvStatisticsConsumer())
         
         let viewController = smp.buildUserInterface().buildViewController()
@@ -36,6 +41,7 @@ class ViewModel: ObservableObject {
          
         smp.playerItemProvider = itemProvider
         smpView = viewController.view
+        smp.play()
     }
     
     func setupConfigJSON() async {

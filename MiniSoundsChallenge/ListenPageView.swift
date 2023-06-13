@@ -9,63 +9,8 @@ import SwiftUI
 
 struct ListenPageView: View {
     
-    @ObservedObject var viewModel: ViewModel
+    @ObservedObject var listenPageViewModel: ListenPageViewModel
     @State var smpVideoView: UIView?
-    
-    struct RadioIcon: View {
-        var station: Stations.Module.StationData
-        
-        var body: some View {
-            ZStack {
-                AsyncImage(
-                    url: URL(string: station.imageUrl.replacingOccurrences(of: "{recipe}", with: "320x320")),
-                    content: { image in
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                    }, placeholder: {} )
-                    .clipShape(Circle())
-                    .frame(maxWidth: 150, maxHeight: 150)
-                Circle()
-                    .strokeBorder(.orange, lineWidth: 3)
-                    .frame(width: 150, height: 150)
-            } .padding(.leading, 10)
-        }
-    }
-    
-    
-    struct StationSquare: View {
-        var station: Stations.Module.StationData
-        var tapped: () -> Void
-        
-        var body: some View {
-            VStack {
-                RadioIcon(station: station)
-                Text(station.titles.primary)
-                    .font(.title3)
-                    .frame(maxWidth: 150, minHeight: 50, maxHeight: 75)
-                    .multilineTextAlignment(.center)
-                Text(station.synopses.short)
-                    .font(.system(size:15))
-                    .frame(maxWidth: 150, minHeight: 50)
-                    .padding(.bottom, 20)
-            }.accessibilityLabel(Text("\(station.titles.primary).  \(station.synopses.short)"))
-                .onTapGesture {
-                    tapped()
-                }
-        }
-    }
-    
-    struct RailHeading: View {
-        var text: String
-        
-        var body: some View {
-            Text(text)
-                .font(.title2)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(10)
-        }
-    }
     
     struct UpdateWarning: View {
         let title: String
@@ -86,26 +31,34 @@ struct ListenPageView: View {
         }
     }
     
-    
     var body: some View {
         NavigationView {
             VStack {
-                SMPView(smpVideoView: smpVideoView)
+                // SMPView(smpVideoView: smpVideoView)
                 ZStack {
                     Group {
-                        if(viewModel.stations.data.count > 0) {
-                            
+                        if(listenPageViewModel.stations.data.count > 0) {
                             ScrollView(.vertical) {
-                                ForEach(viewModel.stations.data, id: \.id) { stationGroup in
+                                ForEach(listenPageViewModel.stations.data, id: \.id) { stationGroup in
                                     VStack {
-                                        RailHeading(text: stationGroup.title)
+                                        Text(stationGroup.title)
+                                            .font(.title2)
+                                            .frame(maxWidth: .infinity, alignment: .leading)
+                                            .padding(10)
                                         ScrollView(.horizontal) {
                                             HStack {
                                                 ForEach(stationGroup.data, id: \.id) { station in
-                                                    StationSquare(station: station) {
-                                                        viewModel.loadSMP(id: station.id)
-                                                        smpVideoView = viewModel.smpView
-                                                    }
+                                                    StationSquareView(viewModel: StationSquareViewModel(
+                                                        id: station.id,
+                                                        title: station.titles.primary,
+                                                        subtitle: station.synopses.short,
+                                                        imageUrl: station.imageUrl))
+                                                        .onTapGesture {
+                                                            listenPageViewModel.currrentlyPlayingStationID = station.id
+                                                            // listenPageViewModel.loadSMP(id: station.id)
+                                                            smpVideoView = listenPageViewModel.smpView
+                                                        }
+                                                    
                                                 } .padding(.trailing, 20)
                                             }
                                         }
@@ -113,14 +66,14 @@ struct ListenPageView: View {
                                 }
                             }
                         }
-                    } .accessibilityHidden(viewModel.config.status.isOn ? false : true)
+                    } .accessibilityHidden(listenPageViewModel.config.status.isOn ? false : true)
                     Group {
-                        if(viewModel.config.status.isOn == false) {
+                        if(listenPageViewModel.config.status.isOn == false) {
                             UpdateWarning(
-                                title: viewModel.config.status.title,
-                                message: viewModel.config.status.message,
-                                linkTitle: viewModel.config.status.linkTitle,
-                                appStoreUrl: viewModel.config.status.appStoreUrl
+                                title: listenPageViewModel.config.status.title,
+                                message: listenPageViewModel.config.status.message,
+                                linkTitle: listenPageViewModel.config.status.linkTitle,
+                                appStoreUrl: listenPageViewModel.config.status.appStoreUrl
                             )
                         }
                     }
@@ -129,7 +82,7 @@ struct ListenPageView: View {
             .navigationTitle("BBC Mini Sounds")
             .onAppear {
                 Task {
-                    await viewModel.setupConfigJSON()
+                    await listenPageViewModel.setupConfigJSON()
                 }
             }
         }
