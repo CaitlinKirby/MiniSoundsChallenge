@@ -12,9 +12,12 @@ import SMP
 class ListenPageViewModel: ObservableObject {
     
     private let configUrl: URL
+    
     @Published var config: Config
     @Published var stations: Stations
     var smpView: UIView?
+    
+    var contentPlaying: Bool = false
     var currrentlyPlayingStationID: String? {
         didSet {
             if let currrentlyPlayingStationID {
@@ -41,7 +44,12 @@ class ListenPageViewModel: ObservableObject {
          
         smp.playerItemProvider = itemProvider
         smpView = viewController.view
-        smp.play()
+        if contentPlaying {
+            smp.pause()
+        } else {
+            smp.play()
+        }
+        
     }
     
     func setupConfigJSON() async {

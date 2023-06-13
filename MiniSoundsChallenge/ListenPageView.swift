@@ -50,6 +50,7 @@ struct ListenPageView: View {
                                 subtitle: station.synopses.short,
                                 imageUrl: station.imageUrl))
                                 .onTapGesture {
+                                    listenPageViewModel.contentPlaying.toggle()
                                     listenPageViewModel.currrentlyPlayingStationID = station.id
                                 }
                             

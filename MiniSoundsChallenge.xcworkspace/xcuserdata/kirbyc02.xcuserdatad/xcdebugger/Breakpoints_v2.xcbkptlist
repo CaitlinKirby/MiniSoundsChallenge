@@ -14,8 +14,8 @@
             filePath = "MiniSoundsChallenge/ListenPageView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "MiniSoundsChallenge/ListenPageView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -109,8 +109,8 @@
             filePath = "MiniSoundsChallenge/ListenPageView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -157,8 +157,8 @@
             filePath = "MiniSoundsChallenge/ListenPageView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -238,6 +238,118 @@
                   offsetFromSymbolStart = "516">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "99783CF3-E6EF-4B8E-974A-90EDA9A9481B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MiniSoundsChallenge/ListenPageViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "loadSMP(id:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "99783CF3-E6EF-4B8E-974A-90EDA9A9481B - 2f7b7aa2ff764228"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MiniSoundsChallenge.ListenPageViewModel.loadSMP(id: Swift.String) -&gt; ()"
+                  moduleName = "MiniSoundsChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirbyc02/sounds-mobile/MiniSoundsChallenge/MiniSoundsChallenge/ListenPageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "768">
+               </Location>
+               <Location
+                  uuid = "99783CF3-E6EF-4B8E-974A-90EDA9A9481B - 2f7b7aa2ff7642ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MiniSoundsChallenge.ListenPageViewModel.loadSMP(id: Swift.String) -&gt; ()"
+                  moduleName = "MiniSoundsChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirbyc02/sounds-mobile/MiniSoundsChallenge/MiniSoundsChallenge/ListenPageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "812">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "480DB964-86B7-4406-8253-1C201B218CEB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MiniSoundsChallenge/ListenPageViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "loadSMP(id:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "480DB964-86B7-4406-8253-1C201B218CEB - 2f7b7aa2ff76426a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MiniSoundsChallenge.ListenPageViewModel.loadSMP(id: Swift.String) -&gt; ()"
+                  moduleName = "MiniSoundsChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirbyc02/sounds-mobile/MiniSoundsChallenge/MiniSoundsChallenge/ListenPageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "740">
+               </Location>
+               <Location
+                  uuid = "480DB964-86B7-4406-8253-1C201B218CEB - 2f7b7aa2ff764228"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MiniSoundsChallenge.ListenPageViewModel.loadSMP(id: Swift.String) -&gt; ()"
+                  moduleName = "MiniSoundsChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirbyc02/sounds-mobile/MiniSoundsChallenge/MiniSoundsChallenge/ListenPageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "784">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5B0D4359-394C-4DDE-B501-B1FDE6B46F8D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MiniSoundsChallenge/ListenPageView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "Rail"
+            landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
