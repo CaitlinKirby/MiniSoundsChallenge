@@ -250,8 +250,8 @@
             filePath = "MiniSoundsChallenge/ListenPageViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "loadSMP(id:)"
             landmarkType = "7">
             <Locations>
@@ -298,8 +298,8 @@
             filePath = "MiniSoundsChallenge/ListenPageViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "loadSMP(id:)"
             landmarkType = "7">
             <Locations>

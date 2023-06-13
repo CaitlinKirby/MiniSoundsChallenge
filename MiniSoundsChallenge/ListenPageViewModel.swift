@@ -18,11 +18,15 @@ class ListenPageViewModel: ObservableObject {
     var smpView: UIView?
     
     var contentPlaying: Bool = false
+    private var previouslyPlayingStationID: String?
     var currrentlyPlayingStationID: String? {
         didSet {
             if let currrentlyPlayingStationID {
                 loadSMP(id: currrentlyPlayingStationID)
             }
+        }
+        willSet {
+            previouslyPlayingStationID = currrentlyPlayingStationID ?? ""
         }
     }
     
@@ -44,7 +48,7 @@ class ListenPageViewModel: ObservableObject {
          
         smp.playerItemProvider = itemProvider
         smpView = viewController.view
-        if contentPlaying {
+        if contentPlaying && previouslyPlayingStationID == currrentlyPlayingStationID {
             smp.pause()
         } else {
             smp.play()
