@@ -10,7 +10,8 @@ import SwiftUI
 
 //TODO: Create HomeView with a ConfigLoadingViewModel and ListenPageFactory()
 struct HomeView: View {
-        
+    
+    viewModel
     var body: some View {
         //TODO: Use Buttons instead and fire an action on ConfigLoadingViewModel called loadConfig(url: YourURL for each button here)
         //TODO: Create an if here, if viewModel.configLoaded then show your listenPageFactory() if not show your buttons or an error message

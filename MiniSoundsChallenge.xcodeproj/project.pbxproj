@@ -18,6 +18,7 @@
 		2C8B379D29B74D8400E1D5CF /* MiniSoundsChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B379C29B74D8400E1D5CF /* MiniSoundsChallengeTests.swift */; };
 		2C8B37A729B74D8400E1D5CF /* MiniSoundsChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B37A629B74D8400E1D5CF /* MiniSoundsChallengeUITests.swift */; };
 		2C8B37A929B74D8400E1D5CF /* MiniSoundsChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B37A829B74D8400E1D5CF /* MiniSoundsChallengeUITestsLaunchTests.swift */; };
+		2C93F80E2A3B01FA00AD6A98 /* ConfigLoadingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C93F80D2A3B01FA00AD6A98 /* ConfigLoadingService.swift */; };
 		2CA0F3342A333159005030F0 /* MyAvStatisticsConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0F3332A333159005030F0 /* MyAvStatisticsConsumer.swift */; };
 		423A58BE501A5EFD899A79CB /* Pods_MiniSoundsChallenge_MiniSoundsChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B9825ABB9316D466E5FC41 /* Pods_MiniSoundsChallenge_MiniSoundsChallengeUITests.framework */; };
 		C5FACE49D255C93E1565A641 /* Pods_MiniSoundsChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CC24EDC06C1BE23E079E0D4 /* Pods_MiniSoundsChallenge.framework */; };
@@ -56,6 +57,7 @@
 		2C8B37A229B74D8400E1D5CF /* MiniSoundsChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniSoundsChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8B37A629B74D8400E1D5CF /* MiniSoundsChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniSoundsChallengeUITests.swift; sourceTree = "<group>"; };
 		2C8B37A829B74D8400E1D5CF /* MiniSoundsChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniSoundsChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2C93F80D2A3B01FA00AD6A98 /* ConfigLoadingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigLoadingService.swift; sourceTree = "<group>"; };
 		2CA0F3332A333159005030F0 /* MyAvStatisticsConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAvStatisticsConsumer.swift; sourceTree = "<group>"; };
 		50DCFD8672F40A727D81B845 /* Pods-MiniSoundsChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniSoundsChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-MiniSoundsChallengeTests/Pods-MiniSoundsChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		54DBA18E852DEF8B5EAFD34F /* Pods-MiniSoundsChallenge-MiniSoundsChallengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniSoundsChallenge-MiniSoundsChallengeUITests.debug.xcconfig"; path = "Target Support Files/Pods-MiniSoundsChallenge-MiniSoundsChallengeUITests/Pods-MiniSoundsChallenge-MiniSoundsChallengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 		2C8B378A29B74D8300E1D5CF /* MiniSoundsChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				2C93F80C2A3B01E000AD6A98 /* Services */,
 				2C8B378F29B74D8400E1D5CF /* Assets.xcassets */,
 				2C8B378B29B74D8300E1D5CF /* MiniSoundsChallengeApp.swift */,
 				2C8B378D29B74D8300E1D5CF /* ContentView.swift */,
@@ -159,6 +162,14 @@
 				2C8B37A829B74D8400E1D5CF /* MiniSoundsChallengeUITestsLaunchTests.swift */,
 			);
 			path = MiniSoundsChallengeUITests;
+			sourceTree = "<group>";
+		};
+		2C93F80C2A3B01E000AD6A98 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2C93F80D2A3B01FA00AD6A98 /* ConfigLoadingService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		4C5A1AB9BAD06CB1FED63CCA /* Pods */ = {
@@ -424,6 +435,7 @@
 			files = (
 				2C65FE7A29D2EE1C00BDFF69 /* ListenPageView.swift in Sources */,
 				2C838A4E2A37592D007307A4 /* StationSquareView.swift in Sources */,
+				2C93F80E2A3B01FA00AD6A98 /* ConfigLoadingService.swift in Sources */,
 				2C8B378E29B74D8300E1D5CF /* ContentView.swift in Sources */,
 				2CA0F3342A333159005030F0 /* MyAvStatisticsConsumer.swift in Sources */,
 				2C82908C2A288E6400F33168 /* ListenPageViewModel.swift in Sources */,

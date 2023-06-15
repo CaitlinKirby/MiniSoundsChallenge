@@ -30,7 +30,7 @@ class ListenPageViewModel: ObservableObject {
         }
     }
     
-    init(configUrl: URL) {
+    init(configUrl: Config) {
         self.configUrl = configUrl
         self.config = Config()
         self.stations = Stations()
