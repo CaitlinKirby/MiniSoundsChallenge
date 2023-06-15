@@ -14,8 +14,8 @@ final class HomeViewModelTests: XCTestCase {
     var homeViewModel: HomeViewModel!
     
     internal override func setUp() async throws {
-        configService = StubConfigService()
-        homeViewModel = HomeViewModel(configLoading: configService)
+        configService = StubConfigService(config: createConfigToReturn())
+        homeViewModel = await HomeViewModel(configLoading: configService)
     }
     
     func testWhenConfigButtonTappedLoadConfigCalled() async {
@@ -25,32 +25,60 @@ final class HomeViewModelTests: XCTestCase {
     }
     
     func testConfigResultStateIsNotLoadedOnInit() async {
-        XCTAssertEqual(homeViewModel.configResultState, .notLoaded)
+        let resultConfigResultState = await homeViewModel.configResultState
+        XCTAssertEqual(resultConfigResultState, .notLoaded)
     }
     
     func testValidConfigSetsValidEnumState() async {
-        let validTestConfig = Config(status: Config.Status(isOn: true))
-        configService.configToReturn = validTestConfig
+        configService.configToReturn = createConfigToReturn(isOn: true)
                 
         await homeViewModel.buttonTapped(isValid: true)
 
-        XCTAssertEqual(homeViewModel.configResultState, .valid)
+        let resultConfigResultState = await homeViewModel.configResultState
+        XCTAssertEqual(resultConfigResultState, .valid(configService.configToReturn))
     }
     
     func testInvalidConfigSetsInvalidEnumState() async {
-        let invalidTestConfig = Config(status: Config.Status(isOn: false))
-        configService.configToReturn = invalidTestConfig
-                
+        configService.configToReturn = createConfigToReturn(isOn: false)
+        
         await homeViewModel.buttonTapped(isValid: false)
 
-        XCTAssertEqual(homeViewModel.configResultState, .invalid)
+        let resultConfigResultState = await homeViewModel.configResultState
+        XCTAssertEqual(resultConfigResultState, .invalid)
     }
     
+    private func createConfigToReturn(
+        isOn: Bool = false,
+        title: String = "",
+        message: String = "",
+        linkTitle: String = "",
+        appStoreUrl: URL = URL(string: "www.bbc.co.uk")!,
+        apiKey: String = "",
+        rootUrl: URL = URL(string: "www.bbc.co.uk")!,
+        allStationsPath: String = "") -> Config
+    {
+        return Config(
+            status: Config.Status(
+                isOn: isOn,
+                title: title,
+                message: message,
+                linkTitle: linkTitle,
+                appStoreUrl: appStoreUrl),
+            rmsConfig: Config.RmsConfig(
+                apiKey: apiKey,
+                rootUrl: rootUrl,
+                allStationsPath: allStationsPath)
+        )
+    }
 }
 
 class StubConfigService: ConfigLoading {
     
-    var configToReturn = Config()
+    var configToReturn: Config
+    
+    init(config: Config) {
+        configToReturn = config
+    }
     
     var loadConfigWasCalled = false
     func loadConfig(url: URL) async -> Config {

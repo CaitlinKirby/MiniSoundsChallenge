@@ -11,7 +11,16 @@ import SwiftUI
 @MainActor
 class HomeViewModel: ObservableObject {
     
-    enum ConfigResultState {
+    enum ConfigResultState: Equatable {
+        static func == (lhs: HomeViewModel.ConfigResultState, rhs: HomeViewModel.ConfigResultState) -> Bool {
+            switch (lhs, rhs) {
+            case (.valid, .valid), (.invalid, .invalid), (.unsuccessful, .unsuccessful), (.notLoaded, .notLoaded):
+                return true
+            default:
+                return false
+            }
+        }
+        
         case valid(Config)
         case invalid
         case unsuccessful

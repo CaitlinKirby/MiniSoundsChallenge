@@ -8,20 +8,20 @@
 import Foundation
 
 struct Config: Codable {
-    var status: Status = Status()
-    var rmsConfig: RmsConfig = RmsConfig()
+    var status: Status
+    var rmsConfig: RmsConfig
     
     struct Status: Codable {
-        var isOn: Bool = false
-        var title: String = "Default"
-        var message: String = "Invalid Config"
-        var linkTitle: String = "Link"
-        var appStoreUrl: URL = URL(string:"www.bbc.co.uk")!
+        var isOn: Bool
+        var title: String
+        var message: String
+        var linkTitle: String
+        var appStoreUrl: URL
     }
     
     struct RmsConfig: Codable {
-        var apiKey: String = "apiKey"
-        var rootUrl: URL = URL(string:"www.bbc.co.uk")!
-        var allStationsPath: String = "/notfound"
+        var apiKey: String
+        var rootUrl: URL
+        var allStationsPath: String
     }
 }
