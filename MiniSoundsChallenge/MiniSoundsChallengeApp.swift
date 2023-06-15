@@ -11,7 +11,9 @@ import SwiftUI
 struct MiniSoundsChallengeApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            let configService = ConfigService()
+            let homeViewModel = HomeViewModel(configLoading: configService)
+            HomeView(viewModel: homeViewModel)
         }
     }
 }

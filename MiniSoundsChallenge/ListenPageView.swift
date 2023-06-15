@@ -87,11 +87,11 @@ struct ListenPageView: View {
                 }
             }
             .navigationTitle("BBC Mini Sounds")
-            .onAppear {
-                Task {
-                    await listenPageViewModel.setupConfigJSON()
-                }
-            }
+//            .onAppear {
+//                Task {
+//                    await listenPageViewModel.setupConfigJSON()
+//                }
+//            }
         }
     }
     

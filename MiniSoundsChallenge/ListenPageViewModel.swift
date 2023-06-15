@@ -10,10 +10,8 @@ import UIKit
 import SMP
 
 class ListenPageViewModel: ObservableObject {
-    
-    private let configUrl: URL
-    
-    @Published var config: Config
+        
+    let config: Config
     @Published var stations: Stations
     var smpView: UIView?
     
@@ -30,10 +28,10 @@ class ListenPageViewModel: ObservableObject {
         }
     }
     
-    init(configUrl: Config) {
-        self.configUrl = configUrl
-        self.config = Config()
+    init(config: Config) {
+        self.config = config
         self.stations = Stations()
+        setupDataJSON(url: URL(string: "\(config.rmsConfig.rootUrl)\(config.rmsConfig.allStationsPath)")!)
     }
     
     private func loadSMP(id: String) {
@@ -54,27 +52,6 @@ class ListenPageViewModel: ObservableObject {
             smp.play()
         }
         
-    }
-    
-    func setupConfigJSON() async {
-        let task = URLSession.shared.dataTask(with: configUrl) { [self] data, response, error in
-            DispatchQueue.main.sync {
-                if let data = data {
-                    let decoder = JSONDecoder()
-                    do {
-                        let decoded = try decoder.decode(Config.self, from: data)
-                        config = decoded
-                        self.setupDataJSON(url: URL(string: "\(config.rmsConfig.rootUrl)\(config.rmsConfig.allStationsPath)")!)
-                    } catch {
-                        print("Failed to decode Config JSON")
-                    }
-                }
-                else if let error = error {
-                    print("Request failed: \(error)")
-                }
-            }
-        }
-        task.resume()
     }
     
     private func setupDataJSON(url: URL) {
