@@ -48,6 +48,7 @@ class ListenPageViewModel: ObservableObject {
          
         smp.playerItemProvider = itemProvider
         smpView = viewController.view
+        
         if contentPlaying && previouslyPlayingStationID == currrentlyPlayingStationID {
             smp.pause()
         } else {

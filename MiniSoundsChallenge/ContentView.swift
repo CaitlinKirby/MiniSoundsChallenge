@@ -22,12 +22,10 @@ struct HomeView: View {
                 }
                 .background(.green)
             }
-            .navigationTitle("Config Selections")
             .buttonStyle(.bordered)
             .foregroundColor(.white)
         }
     }
-    
 }
 
 

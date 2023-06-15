@@ -53,7 +53,6 @@ struct ListenPageView: View {
                                     listenPageViewModel.contentPlaying.toggle()
                                     listenPageViewModel.currrentlyPlayingStationID = station.id
                                 }
-                            
                         } .padding(.trailing, 20)
                     }
                 }
@@ -93,6 +92,7 @@ struct ListenPageView: View {
                 }
             }
         }
+        // .navigationBarHidden(true)
     }
     
 }

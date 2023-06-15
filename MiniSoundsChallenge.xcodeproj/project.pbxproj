@@ -124,10 +124,10 @@
 				2C8B378F29B74D8400E1D5CF /* Assets.xcassets */,
 				2C8B378D29B74D8300E1D5CF /* ContentView.swift */,
 				2C65FE7929D2EE1C00BDFF69 /* ListenPageView.swift */,
-				2C8B378B29B74D8300E1D5CF /* MiniSoundsChallengeApp.swift */,
 				2C82908B2A288E6400F33168 /* ListenPageViewModel.swift */,
-				2C8B379129B74D8400E1D5CF /* Preview Content */,
+				2C8B378B29B74D8300E1D5CF /* MiniSoundsChallengeApp.swift */,
 				2CA0F3332A333159005030F0 /* MyAvStatisticsConsumer.swift */,
+				2C8B379129B74D8400E1D5CF /* Preview Content */,
 				2C838A4D2A37592D007307A4 /* StationSquareView.swift */,
 				2C838A4F2A375955007307A4 /* StationSquareViewModel.swift */,
 			);
