@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct ListenPageView: View {
-    
     @ObservedObject var listenPageViewModel: ListenPageViewModel
-    @State var smpVideoView: UIView?
     
     var body: some View {
         VStack {
@@ -18,7 +16,12 @@ struct ListenPageView: View {
             ZStack {
                 ScrollView(.vertical) {
                     ForEach(listenPageViewModel.modules ?? [], id: \.id) { module in
-                        RailView(viewModel: RailViewModel(title: module.title, stations: module.data))
+                        RailView(viewModel: RailViewModel(
+                                title: module.title,
+                                stations: module.data,
+                                playbackService: listenPageViewModel.playbackService
+                            )
+                        )
                     }
                 }
             }
@@ -29,6 +32,5 @@ struct ListenPageView: View {
             }
             
         }
-    }
-    
+    }    
 }

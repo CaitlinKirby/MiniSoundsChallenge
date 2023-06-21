@@ -24,10 +24,10 @@ struct RailView: View {
                             title: station.titles.primary,
                             subtitle: station.synopses.short,
                             imageUrl: station.image_url))
-//                            .onTapGesture {
-//                                viewModel.contentPlaying.toggle()
-//                                viewModel.currrentlyPlayingStationID = station.id
-//                            }
+                            .onTapGesture {
+                                viewModel.playbackService.contentPlaying.toggle()
+                                viewModel.playbackService.currrentlyPlayingStationID = station.id
+                            }
                     } .padding(.trailing, 20)
                 }
             }
