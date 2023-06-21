@@ -14,7 +14,7 @@ struct HomeView: View {
     var body: some View {
         switch viewModel.configResultState {
         case .valid(let config):
-            ListenPageView(listenPageViewModel: ListenPageViewModel(config: config))
+            ListenPageView(listenPageViewModel: ListenPageViewModel(rmsLoading: RMSService(config: config)))
         case .invalid:
             Text("Invalid")
         case .unsuccessful:

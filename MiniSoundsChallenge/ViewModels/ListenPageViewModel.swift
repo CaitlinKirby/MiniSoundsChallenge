@@ -9,10 +9,12 @@ import Foundation
 import UIKit
 import SMP
 
+@MainActor
 class ListenPageViewModel: ObservableObject {
         
-    let config: Config
-    @Published var stations: Stations
+    private let rmsLoading: RMSLoading
+    @Published var modules: [Stations.Module]?
+    
     var smpView: UIView?
     
     var contentPlaying: Bool = false
@@ -28,11 +30,29 @@ class ListenPageViewModel: ObservableObject {
         }
     }
     
-    init(config: Config) {
-        self.config = config
-        self.stations = Stations()
-        setupDataJSON(url: URL(string: "\(config.rmsConfig.rootUrl)\(config.rmsConfig.allStationsPath)")!)
+    init(rmsLoading: RMSLoading) {
+        self.rmsLoading = rmsLoading
     }
+    
+    func setupStationsData() async throws {
+        modules = try await self.rmsLoading.loadData().data
+    }
+    
+//    func getStationsCount(for moduleID: String) -> Int {
+//        if let selectedModule = stations?.data.first(where: { module in
+//            module.id == moduleID
+//        }) {
+//            return selectedModule.data.count
+//        }
+//        return 0
+//    }
+//    
+//    func getModuleCount() -> Int {
+//        if let stations {
+//            return stations.data.count
+//        }
+//        return 0
+//    }
     
     private func loadSMP(id: String) {
         var builder = BBCSMPPlayerBuilder()
@@ -52,27 +72,5 @@ class ListenPageViewModel: ObservableObject {
             smp.play()
         }
         
-    }
-    
-    private func setupDataJSON(url: URL) {
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            DispatchQueue.main.sync {
-                if let data = data {
-                    let decoder = JSONDecoder()
-                    decoder.keyDecodingStrategy = .convertFromSnakeCase
-                    
-                    do {
-                        let decoded = try decoder.decode(Stations.self, from: data)
-                        self.stations = decoded
-                    } catch {
-                        print("Failed to decode Data JSON")
-                    }
-                }
-                else if let error = error {
-                    print("Request failed: \(error)")
-                }
-            }
-        }
-        task.resume()
     }
 }

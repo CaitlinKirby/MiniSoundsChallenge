@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C6485942A3B43EA00FC629D /* ConfigServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA10902A3B20B70023EF02 /* ConfigServiceTest.swift */; };
+		2C6485942A3B43EA00FC629D /* ListenViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA10902A3B20B70023EF02 /* ListenViewModelTest.swift */; };
+		2C6485962A3B56DB00FC629D /* RMSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6485952A3B56DB00FC629D /* RMSService.swift */; };
+		2C64859A2A3C65D900FC629D /* PlaybackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6485992A3C65D900FC629D /* PlaybackService.swift */; };
 		2C65FE7A29D2EE1C00BDFF69 /* ListenPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C65FE7929D2EE1C00BDFF69 /* ListenPageView.swift */; };
 		2C82908C2A288E6400F33168 /* ListenPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C82908B2A288E6400F33168 /* ListenPageViewModel.swift */; };
 		2C838A4E2A37592D007307A4 /* StationSquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C838A4D2A37592D007307A4 /* StationSquareView.swift */; };
@@ -19,10 +21,11 @@
 		2C8B379D29B74D8400E1D5CF /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B379C29B74D8400E1D5CF /* HomeViewModelTests.swift */; };
 		2C8B37A729B74D8400E1D5CF /* MiniSoundsChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B37A629B74D8400E1D5CF /* MiniSoundsChallengeUITests.swift */; };
 		2C8B37A929B74D8400E1D5CF /* MiniSoundsChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B37A829B74D8400E1D5CF /* MiniSoundsChallengeUITestsLaunchTests.swift */; };
-		2C93F80E2A3B01FA00AD6A98 /* ConfigLoadingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C93F80D2A3B01FA00AD6A98 /* ConfigLoadingService.swift */; };
 		2C93F8102A3B057F00AD6A98 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C93F80F2A3B057E00AD6A98 /* HomeViewModel.swift */; };
 		2C93F8122A3B06F500AD6A98 /* ConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C93F8112A3B06F500AD6A98 /* ConfigService.swift */; };
 		2CA0F3342A333159005030F0 /* MyAvStatisticsConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0F3332A333159005030F0 /* MyAvStatisticsConsumer.swift */; };
+		2CA8B8A72A41D98100B2EC77 /* RailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA8B8A62A41D98100B2EC77 /* RailViewModel.swift */; };
+		2CA8B8A92A41D99800B2EC77 /* RailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA8B8A82A41D99800B2EC77 /* RailView.swift */; };
 		2CFA108D2A3B1C9C0023EF02 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA108C2A3B1C9C0023EF02 /* Config.swift */; };
 		2CFA108F2A3B1CD20023EF02 /* Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA108E2A3B1CD20023EF02 /* Stations.swift */; };
 		423A58BE501A5EFD899A79CB /* Pods_MiniSoundsChallenge_MiniSoundsChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B9825ABB9316D466E5FC41 /* Pods_MiniSoundsChallenge_MiniSoundsChallengeUITests.framework */; };
@@ -48,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C6485952A3B56DB00FC629D /* RMSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMSService.swift; sourceTree = "<group>"; };
+		2C6485992A3C65D900FC629D /* PlaybackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackService.swift; sourceTree = "<group>"; };
 		2C65FE7929D2EE1C00BDFF69 /* ListenPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenPageView.swift; sourceTree = "<group>"; };
 		2C82908B2A288E6400F33168 /* ListenPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenPageViewModel.swift; sourceTree = "<group>"; };
 		2C838A4D2A37592D007307A4 /* StationSquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSquareView.swift; sourceTree = "<group>"; };
@@ -62,13 +67,14 @@
 		2C8B37A229B74D8400E1D5CF /* MiniSoundsChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniSoundsChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8B37A629B74D8400E1D5CF /* MiniSoundsChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniSoundsChallengeUITests.swift; sourceTree = "<group>"; };
 		2C8B37A829B74D8400E1D5CF /* MiniSoundsChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniSoundsChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		2C93F80D2A3B01FA00AD6A98 /* ConfigLoadingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigLoadingService.swift; sourceTree = "<group>"; };
 		2C93F80F2A3B057E00AD6A98 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		2C93F8112A3B06F500AD6A98 /* ConfigService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigService.swift; sourceTree = "<group>"; };
 		2CA0F3332A333159005030F0 /* MyAvStatisticsConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAvStatisticsConsumer.swift; sourceTree = "<group>"; };
+		2CA8B8A62A41D98100B2EC77 /* RailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailViewModel.swift; sourceTree = "<group>"; };
+		2CA8B8A82A41D99800B2EC77 /* RailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailView.swift; sourceTree = "<group>"; };
 		2CFA108C2A3B1C9C0023EF02 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		2CFA108E2A3B1CD20023EF02 /* Stations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stations.swift; sourceTree = "<group>"; };
-		2CFA10902A3B20B70023EF02 /* ConfigServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigServiceTest.swift; sourceTree = "<group>"; };
+		2CFA10902A3B20B70023EF02 /* ListenViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenViewModelTest.swift; sourceTree = "<group>"; };
 		50DCFD8672F40A727D81B845 /* Pods-MiniSoundsChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniSoundsChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-MiniSoundsChallengeTests/Pods-MiniSoundsChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		54DBA18E852DEF8B5EAFD34F /* Pods-MiniSoundsChallenge-MiniSoundsChallengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniSoundsChallenge-MiniSoundsChallengeUITests.debug.xcconfig"; path = "Target Support Files/Pods-MiniSoundsChallenge-MiniSoundsChallengeUITests/Pods-MiniSoundsChallenge-MiniSoundsChallengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		68E57B500FD4079BCC71C117 /* Pods-MiniSoundsChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniSoundsChallenge.release.xcconfig"; path = "Target Support Files/Pods-MiniSoundsChallenge/Pods-MiniSoundsChallenge.release.xcconfig"; sourceTree = "<group>"; };
@@ -134,20 +140,14 @@
 		2C8B378A29B74D8300E1D5CF /* MiniSoundsChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				2CFA108B2A3B1C920023EF02 /* DataAccess */,
-				2C8B378F29B74D8400E1D5CF /* Assets.xcassets */,
-				2C93F8112A3B06F500AD6A98 /* ConfigService.swift */,
-				2C8B378D29B74D8300E1D5CF /* HomeView.swift */,
-				2C93F80F2A3B057E00AD6A98 /* HomeViewModel.swift */,
-				2C65FE7929D2EE1C00BDFF69 /* ListenPageView.swift */,
-				2C82908B2A288E6400F33168 /* ListenPageViewModel.swift */,
-				2C8B378B29B74D8300E1D5CF /* MiniSoundsChallengeApp.swift */,
-				2CA0F3332A333159005030F0 /* MyAvStatisticsConsumer.swift */,
 				835C56562A38BB6A00E212D7 /* Notes.md */,
+				2C8B378B29B74D8300E1D5CF /* MiniSoundsChallengeApp.swift */,
+				2C8B378F29B74D8400E1D5CF /* Assets.xcassets */,
+				2CFA108B2A3B1C920023EF02 /* DataAccess */,
 				2C8B379129B74D8400E1D5CF /* Preview Content */,
 				2C93F80C2A3B01E000AD6A98 /* Services */,
-				2C838A4D2A37592D007307A4 /* StationSquareView.swift */,
-				2C838A4F2A375955007307A4 /* StationSquareViewModel.swift */,
+				2CA8B8AB2A41DD3B00B2EC77 /* ViewModels */,
+				2CA8B8AA2A41DD2400B2EC77 /* Views */,
 			);
 			path = MiniSoundsChallenge;
 			sourceTree = "<group>";
@@ -163,7 +163,7 @@
 		2C8B379B29B74D8400E1D5CF /* MiniSoundsChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				2CFA10902A3B20B70023EF02 /* ConfigServiceTest.swift */,
+				2CFA10902A3B20B70023EF02 /* ListenViewModelTest.swift */,
 				2C8B379C29B74D8400E1D5CF /* HomeViewModelTests.swift */,
 			);
 			path = MiniSoundsChallengeTests;
@@ -181,9 +181,34 @@
 		2C93F80C2A3B01E000AD6A98 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				2C93F80D2A3B01FA00AD6A98 /* ConfigLoadingService.swift */,
+				2CA0F3332A333159005030F0 /* MyAvStatisticsConsumer.swift */,
+				2C6485952A3B56DB00FC629D /* RMSService.swift */,
+				2C93F8112A3B06F500AD6A98 /* ConfigService.swift */,
+				2C6485992A3C65D900FC629D /* PlaybackService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		2CA8B8AA2A41DD2400B2EC77 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2C8B378D29B74D8300E1D5CF /* HomeView.swift */,
+				2C65FE7929D2EE1C00BDFF69 /* ListenPageView.swift */,
+				2CA8B8A82A41D99800B2EC77 /* RailView.swift */,
+				2C838A4D2A37592D007307A4 /* StationSquareView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2CA8B8AB2A41DD3B00B2EC77 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2C82908B2A288E6400F33168 /* ListenPageViewModel.swift */,
+				2C838A4F2A375955007307A4 /* StationSquareViewModel.swift */,
+				2CA8B8A62A41D98100B2EC77 /* RailViewModel.swift */,
+				2C93F80F2A3B057E00AD6A98 /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		2CFA108B2A3B1C920023EF02 /* DataAccess */ = {
@@ -459,14 +484,17 @@
 				2C65FE7A29D2EE1C00BDFF69 /* ListenPageView.swift in Sources */,
 				2C93F8102A3B057F00AD6A98 /* HomeViewModel.swift in Sources */,
 				2CFA108F2A3B1CD20023EF02 /* Stations.swift in Sources */,
+				2CA8B8A92A41D99800B2EC77 /* RailView.swift in Sources */,
 				2C838A4E2A37592D007307A4 /* StationSquareView.swift in Sources */,
-				2C93F80E2A3B01FA00AD6A98 /* ConfigLoadingService.swift in Sources */,
+				2CA8B8A72A41D98100B2EC77 /* RailViewModel.swift in Sources */,
 				2CFA108D2A3B1C9C0023EF02 /* Config.swift in Sources */,
 				2C8B378E29B74D8300E1D5CF /* HomeView.swift in Sources */,
 				2CA0F3342A333159005030F0 /* MyAvStatisticsConsumer.swift in Sources */,
 				2C82908C2A288E6400F33168 /* ListenPageViewModel.swift in Sources */,
 				2C8B378C29B74D8300E1D5CF /* MiniSoundsChallengeApp.swift in Sources */,
 				2C838A502A375955007307A4 /* StationSquareViewModel.swift in Sources */,
+				2C6485962A3B56DB00FC629D /* RMSService.swift in Sources */,
+				2C64859A2A3C65D900FC629D /* PlaybackService.swift in Sources */,
 				2C93F8122A3B06F500AD6A98 /* ConfigService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,7 +504,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C8B379D29B74D8400E1D5CF /* HomeViewModelTests.swift in Sources */,
-				2C6485942A3B43EA00FC629D /* ConfigServiceTest.swift in Sources */,
+				2C6485942A3B43EA00FC629D /* ListenViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

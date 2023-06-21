@@ -7,7 +7,7 @@
 
 import Foundation
 
-class StationSquareViewModel {
+struct StationSquareViewModel {
     
     let id: String
     let title: String

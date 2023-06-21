@@ -9,16 +9,13 @@ import Foundation
 
 struct ConfigService: ConfigLoading {
     
-    var session = URLSession.shared
+    private var session = URLSession.shared
 
     func loadConfig(url: URL) async throws -> Config {
         let (data, _) = try await session.data(from: url)
         let decoder = JSONDecoder()
         return try decoder.decode(Config.self, from: data)
     }
-    
-    
-    
 }
 
 protocol ConfigLoading {
