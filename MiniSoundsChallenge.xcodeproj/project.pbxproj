@@ -24,6 +24,8 @@
 		2C8B379D29B74D8400E1D5CF /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B379C29B74D8400E1D5CF /* HomeViewModelTests.swift */; };
 		2C8B37A729B74D8400E1D5CF /* MiniSoundsChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B37A629B74D8400E1D5CF /* MiniSoundsChallengeUITests.swift */; };
 		2C8B37A929B74D8400E1D5CF /* MiniSoundsChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B37A829B74D8400E1D5CF /* MiniSoundsChallengeUITestsLaunchTests.swift */; };
+		2C93E4882A4C811F00702105 /* InvalidConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C93E4872A4C811F00702105 /* InvalidConfigView.swift */; };
+		2C93E48A2A4C814100702105 /* InvalidConfigViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C93E4892A4C814100702105 /* InvalidConfigViewModel.swift */; };
 		2C93F8102A3B057F00AD6A98 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C93F80F2A3B057E00AD6A98 /* HomeViewModel.swift */; };
 		2C93F8122A3B06F500AD6A98 /* ConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C93F8112A3B06F500AD6A98 /* ConfigService.swift */; };
 		2CA0F3342A333159005030F0 /* MyAvStatisticsConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0F3332A333159005030F0 /* MyAvStatisticsConsumer.swift */; };
@@ -73,6 +75,8 @@
 		2C8B37A229B74D8400E1D5CF /* MiniSoundsChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniSoundsChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8B37A629B74D8400E1D5CF /* MiniSoundsChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniSoundsChallengeUITests.swift; sourceTree = "<group>"; };
 		2C8B37A829B74D8400E1D5CF /* MiniSoundsChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniSoundsChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2C93E4872A4C811F00702105 /* InvalidConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidConfigView.swift; sourceTree = "<group>"; };
+		2C93E4892A4C814100702105 /* InvalidConfigViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidConfigViewModel.swift; sourceTree = "<group>"; };
 		2C93F80F2A3B057E00AD6A98 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		2C93F8112A3B06F500AD6A98 /* ConfigService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigService.swift; sourceTree = "<group>"; };
 		2CA0F3332A333159005030F0 /* MyAvStatisticsConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAvStatisticsConsumer.swift; sourceTree = "<group>"; };
@@ -205,6 +209,7 @@
 				2C65FE7929D2EE1C00BDFF69 /* ListenPageView.swift */,
 				2CA8B8A82A41D99800B2EC77 /* RailView.swift */,
 				2C838A4D2A37592D007307A4 /* StationSquareView.swift */,
+				2C93E4872A4C811F00702105 /* InvalidConfigView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 				2C838A4F2A375955007307A4 /* StationSquareViewModel.swift */,
 				2CA8B8A62A41D98100B2EC77 /* RailViewModel.swift */,
 				2C93F80F2A3B057E00AD6A98 /* HomeViewModel.swift */,
+				2C93E4892A4C814100702105 /* InvalidConfigViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -500,7 +506,9 @@
 				2C8B378E29B74D8300E1D5CF /* HomeView.swift in Sources */,
 				2CA0F3342A333159005030F0 /* MyAvStatisticsConsumer.swift in Sources */,
 				2C82908C2A288E6400F33168 /* ListenPageViewModel.swift in Sources */,
+				2C93E4882A4C811F00702105 /* InvalidConfigView.swift in Sources */,
 				2C8B378C29B74D8300E1D5CF /* MiniSoundsChallengeApp.swift in Sources */,
+				2C93E48A2A4C814100702105 /* InvalidConfigViewModel.swift in Sources */,
 				2C838A502A375955007307A4 /* StationSquareViewModel.swift in Sources */,
 				2C6485962A3B56DB00FC629D /* RMSService.swift in Sources */,
 				2C64859A2A3C65D900FC629D /* PlaybackService.swift in Sources */,

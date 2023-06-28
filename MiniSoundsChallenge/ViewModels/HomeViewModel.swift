@@ -22,7 +22,7 @@ class HomeViewModel: ObservableObject {
         }
         
         case valid(Config)
-        case invalid
+        case invalid(Config)
         case unsuccessful
         case notLoaded
     }
@@ -41,7 +41,7 @@ class HomeViewModel: ObservableObject {
     func buttonTapped(isValid: Bool) async {
         do {
             let result = try await configLoading.loadConfig(url: isValid ? validURL : invalidURL)
-            configResultState = result.status.isOn ? ConfigResultState.valid(result) : ConfigResultState.invalid
+            configResultState = result.status.isOn ? ConfigResultState.valid(result) : ConfigResultState.invalid(result)
         } catch {
             configResultState = ConfigResultState.unsuccessful
         }
