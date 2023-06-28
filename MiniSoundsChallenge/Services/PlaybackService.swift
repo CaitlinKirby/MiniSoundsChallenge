@@ -11,26 +11,36 @@ import SMP
 
 class PlaybackService {
     
-    var smpView: UIView?
+    private var smpView: UIView?
+    private var smp: BBCSMP
     
     var contentPlaying: Bool = false
-    private var previouslyPlayingStationID: String?
-    var currrentlyPlayingStationID: String? {
-        didSet {
-            if let currrentlyPlayingStationID {
-                loadSMP(id: currrentlyPlayingStationID)
-            }
+    var currrentlyLoadedStationID: String?
+    
+    init() {
+        func buildSMP() -> BBCSMP {
+            var builder = BBCSMPPlayerBuilder()
+            builder = builder.withInterruptionEndedBehaviour(.autoresume)
+            return builder.build()
         }
-        willSet {
-            previouslyPlayingStationID = currrentlyPlayingStationID ?? ""
+        smp = buildSMP()
+    }
+    
+    func play(_ stationID: String) {
+        if currrentlyLoadedStationID != stationID {
+            loadSMP(id: stationID)
         }
+        smp.play()
+        currrentlyLoadedStationID = stationID
+        contentPlaying = true
+    }
+    
+    func pause() {
+        smp.pause()
+        contentPlaying = false
     }
     
     private func loadSMP(id: String) {
-        var builder = BBCSMPPlayerBuilder()
-        builder = builder.withInterruptionEndedBehaviour(.autoresume)
-        let smp = builder.build()
-                 
         let playerItemProvider = MediaSelectorItemProviderBuilder(VPID: id, mediaSet: "mobile-phone-main", AVType: .audio, streamType: .simulcast, avStatisticsConsumer: MyAvStatisticsConsumer())
         
         let viewController = smp.buildUserInterface().buildViewController()
@@ -38,11 +48,5 @@ class PlaybackService {
          
         smp.playerItemProvider = itemProvider
         smpView = viewController.view
-        if contentPlaying && previouslyPlayingStationID == currrentlyPlayingStationID {
-            smp.pause()
-        } else {
-            smp.play()
-        }
-        
     }
 }

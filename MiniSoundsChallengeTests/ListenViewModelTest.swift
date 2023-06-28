@@ -10,43 +10,47 @@ import XCTest
 final class ListenViewModelTest: XCTestCase {
     
     var rmsService: StubRMSService!
+    var playbackService: PlaybackService!
     var listenPageViewModel: ListenPageViewModel!
+    var stubDataCreation: StubDataCreation!
     
     internal override func setUp() async throws {
+        stubDataCreation = StubDataCreation()
         rmsService = StubRMSService(
-            returnStations: createStubStationsToReturn(
-                data: [createStubModule(
-                    data: [createStubStationData(
-                        titles: createStubStationTitles(),
-                        synopses: createStubStationSynopses()
+            returnStations: stubDataCreation.createStubStationsToReturn(
+                data: [stubDataCreation.createStubModule(
+                    data: [stubDataCreation.createStubStationData(
+                        titles: stubDataCreation.createStubStationTitles(),
+                        synopses: stubDataCreation.createStubStationSynopses()
                     )]
                 )]
             )
         )
-        listenPageViewModel = await ListenPageViewModel(rmsLoading: rmsService)
+        playbackService = PlaybackService()
+        listenPageViewModel = await ListenPageViewModel(rmsLoading: rmsService, playbackService: playbackService)
     }
 
     func testSetupStationsDataInitsDataCorrectly() async throws {
         rmsService.returnStations =
-            createStubStationsToReturn (
-                data: [createStubModule (
+        stubDataCreation.createStubStationsToReturn (
+            data: [stubDataCreation.createStubModule (
                     data: [
-                        createStubStationData (
-                            titles: createStubStationTitles(),
-                            synopses: createStubStationSynopses()),
-                        createStubStationData (
-                            titles: createStubStationTitles(),
-                            synopses: createStubStationSynopses())
+                        stubDataCreation.createStubStationData (
+                            titles: stubDataCreation.createStubStationTitles(),
+                            synopses: stubDataCreation.createStubStationSynopses()),
+                        stubDataCreation.createStubStationData (
+                            titles: stubDataCreation.createStubStationTitles(),
+                            synopses: stubDataCreation.createStubStationSynopses())
                             ]
                         ),
-                       createStubModule(
+                   stubDataCreation.createStubModule(
                            data: [
-                               createStubStationData(
-                                   titles: createStubStationTitles(),
-                                   synopses: createStubStationSynopses()),
-                               createStubStationData(
-                                   titles: createStubStationTitles(),
-                                   synopses: createStubStationSynopses())
+                            stubDataCreation.createStubStationData(
+                                titles: stubDataCreation.createStubStationTitles(),
+                                synopses: stubDataCreation.createStubStationSynopses()),
+                            stubDataCreation.createStubStationData(
+                                titles: stubDataCreation.createStubStationTitles(),
+                                synopses: stubDataCreation.createStubStationSynopses())
                            ]
                        )
                 ]
@@ -60,64 +64,6 @@ final class ListenViewModelTest: XCTestCase {
     
     private func setupData() async throws {
         try await listenPageViewModel.setupStationsData()
-    }
-    
-    private func createStubStationsToReturn(
-        data: [Stations.Module]
-    ) -> Stations {
-        return Stations(
-            data: data
-        )
-    }
-    
-    private func createStubModule(
-        title: String = "",
-        data: [Stations.Module.StationData],
-        id: String = ""
-    ) -> Stations.Module {
-        return Stations.Module(
-            title: title,
-            data: data,
-            id: id
-        )
-    }
-    
-    private func createStubStationData(
-        id: String = "",
-        titles: Stations.Module.StationData.Titles,
-        synopses: Stations.Module.StationData.Synopses,
-        image_url: String = ""
-    ) -> Stations.Module.StationData {
-        return Stations.Module.StationData(
-            id: id,
-            titles: titles,
-            synopses: synopses,
-            image_url: image_url
-        )
-    }
-    
-    private func createStubStationTitles(
-        primary: String = "",
-        secondary: String = "",
-        tertiary: String = ""
-    ) -> Stations.Module.StationData.Titles {
-        return Stations.Module.StationData.Titles(
-            primary: primary,
-            secondary: secondary,
-            tertiary: tertiary
-        )
-    }
-    
-    private func createStubStationSynopses(
-        short: String = "",
-        medium: String = "",
-        long: String = ""
-    ) -> Stations.Module.StationData.Synopses {
-        return Stations.Module.StationData.Synopses(
-            short: short,
-            medium: medium,
-            long: long
-        )
     }
     
 }

@@ -25,8 +25,7 @@ struct RailView: View {
                             subtitle: station.synopses.short,
                             imageUrl: station.image_url))
                             .onTapGesture {
-                                viewModel.playbackService.contentPlaying.toggle()
-                                viewModel.playbackService.currrentlyPlayingStationID = station.id
+                                viewModel.tapped(stationID: station.id)
                             }
                     } .padding(.trailing, 20)
                 }
