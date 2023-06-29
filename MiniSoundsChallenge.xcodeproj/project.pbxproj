@@ -7,18 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C47291E2A4AC4F0005A06DB /* RailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C47291D2A4AC4F0005A06DB /* RailViewModelTests.swift */; };
+		2C4729202A4AC640005A06DB /* StubDataCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C47291F2A4AC640005A06DB /* StubDataCreation.swift */; };
+		2C4729222A4AE97D005A06DB /* PlaybackServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4729212A4AE97D005A06DB /* PlaybackServiceTests.swift */; };
+		2C6485942A3B43EA00FC629D /* ListenViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA10902A3B20B70023EF02 /* ListenViewModelTest.swift */; };
+		2C6485962A3B56DB00FC629D /* RMSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6485952A3B56DB00FC629D /* RMSService.swift */; };
+		2C64859A2A3C65D900FC629D /* PlaybackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6485992A3C65D900FC629D /* PlaybackService.swift */; };
 		2C65FE7A29D2EE1C00BDFF69 /* ListenPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C65FE7929D2EE1C00BDFF69 /* ListenPageView.swift */; };
 		2C82908C2A288E6400F33168 /* ListenPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C82908B2A288E6400F33168 /* ListenPageViewModel.swift */; };
 		2C838A4E2A37592D007307A4 /* StationSquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C838A4D2A37592D007307A4 /* StationSquareView.swift */; };
 		2C838A502A375955007307A4 /* StationSquareViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C838A4F2A375955007307A4 /* StationSquareViewModel.swift */; };
 		2C8B378C29B74D8300E1D5CF /* MiniSoundsChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B378B29B74D8300E1D5CF /* MiniSoundsChallengeApp.swift */; };
-		2C8B378E29B74D8300E1D5CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B378D29B74D8300E1D5CF /* ContentView.swift */; };
+		2C8B378E29B74D8300E1D5CF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B378D29B74D8300E1D5CF /* HomeView.swift */; };
 		2C8B379029B74D8400E1D5CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C8B378F29B74D8400E1D5CF /* Assets.xcassets */; };
 		2C8B379329B74D8400E1D5CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C8B379229B74D8400E1D5CF /* Preview Assets.xcassets */; };
-		2C8B379D29B74D8400E1D5CF /* MiniSoundsChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B379C29B74D8400E1D5CF /* MiniSoundsChallengeTests.swift */; };
+		2C8B379D29B74D8400E1D5CF /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B379C29B74D8400E1D5CF /* HomeViewModelTests.swift */; };
 		2C8B37A729B74D8400E1D5CF /* MiniSoundsChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B37A629B74D8400E1D5CF /* MiniSoundsChallengeUITests.swift */; };
 		2C8B37A929B74D8400E1D5CF /* MiniSoundsChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B37A829B74D8400E1D5CF /* MiniSoundsChallengeUITestsLaunchTests.swift */; };
+		2C93E4882A4C811F00702105 /* InvalidConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C93E4872A4C811F00702105 /* InvalidConfigView.swift */; };
+		2C93E48A2A4C814100702105 /* InvalidConfigViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C93E4892A4C814100702105 /* InvalidConfigViewModel.swift */; };
+		2C93F8102A3B057F00AD6A98 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C93F80F2A3B057E00AD6A98 /* HomeViewModel.swift */; };
+		2C93F8122A3B06F500AD6A98 /* ConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C93F8112A3B06F500AD6A98 /* ConfigService.swift */; };
 		2CA0F3342A333159005030F0 /* MyAvStatisticsConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0F3332A333159005030F0 /* MyAvStatisticsConsumer.swift */; };
+		2CA8B8A72A41D98100B2EC77 /* RailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA8B8A62A41D98100B2EC77 /* RailViewModel.swift */; };
+		2CA8B8A92A41D99800B2EC77 /* RailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA8B8A82A41D99800B2EC77 /* RailView.swift */; };
+		2CFA108D2A3B1C9C0023EF02 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA108C2A3B1C9C0023EF02 /* Config.swift */; };
+		2CFA108F2A3B1CD20023EF02 /* Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA108E2A3B1CD20023EF02 /* Stations.swift */; };
 		423A58BE501A5EFD899A79CB /* Pods_MiniSoundsChallenge_MiniSoundsChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B9825ABB9316D466E5FC41 /* Pods_MiniSoundsChallenge_MiniSoundsChallengeUITests.framework */; };
 		C5FACE49D255C93E1565A641 /* Pods_MiniSoundsChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CC24EDC06C1BE23E079E0D4 /* Pods_MiniSoundsChallenge.framework */; };
 		C6BB729FBED93561F6E7C402 /* Pods_MiniSoundsChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96CB245EC7519C9360F29D8B /* Pods_MiniSoundsChallengeTests.framework */; };
@@ -42,27 +56,42 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C47291D2A4AC4F0005A06DB /* RailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailViewModelTests.swift; sourceTree = "<group>"; };
+		2C47291F2A4AC640005A06DB /* StubDataCreation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubDataCreation.swift; sourceTree = "<group>"; };
+		2C4729212A4AE97D005A06DB /* PlaybackServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackServiceTests.swift; sourceTree = "<group>"; };
+		2C6485952A3B56DB00FC629D /* RMSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMSService.swift; sourceTree = "<group>"; };
+		2C6485992A3C65D900FC629D /* PlaybackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackService.swift; sourceTree = "<group>"; };
 		2C65FE7929D2EE1C00BDFF69 /* ListenPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenPageView.swift; sourceTree = "<group>"; };
 		2C82908B2A288E6400F33168 /* ListenPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenPageViewModel.swift; sourceTree = "<group>"; };
 		2C838A4D2A37592D007307A4 /* StationSquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSquareView.swift; sourceTree = "<group>"; };
 		2C838A4F2A375955007307A4 /* StationSquareViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSquareViewModel.swift; sourceTree = "<group>"; };
 		2C8B378829B74D8300E1D5CF /* MiniSoundsChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniSoundsChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8B378B29B74D8300E1D5CF /* MiniSoundsChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniSoundsChallengeApp.swift; sourceTree = "<group>"; };
-		2C8B378D29B74D8300E1D5CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2C8B378D29B74D8300E1D5CF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2C8B378F29B74D8400E1D5CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C8B379229B74D8400E1D5CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2C8B379829B74D8400E1D5CF /* MiniSoundsChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniSoundsChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C8B379C29B74D8400E1D5CF /* MiniSoundsChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniSoundsChallengeTests.swift; sourceTree = "<group>"; };
+		2C8B379C29B74D8400E1D5CF /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		2C8B37A229B74D8400E1D5CF /* MiniSoundsChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniSoundsChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8B37A629B74D8400E1D5CF /* MiniSoundsChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniSoundsChallengeUITests.swift; sourceTree = "<group>"; };
 		2C8B37A829B74D8400E1D5CF /* MiniSoundsChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniSoundsChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2C93E4872A4C811F00702105 /* InvalidConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidConfigView.swift; sourceTree = "<group>"; };
+		2C93E4892A4C814100702105 /* InvalidConfigViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidConfigViewModel.swift; sourceTree = "<group>"; };
+		2C93F80F2A3B057E00AD6A98 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		2C93F8112A3B06F500AD6A98 /* ConfigService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigService.swift; sourceTree = "<group>"; };
 		2CA0F3332A333159005030F0 /* MyAvStatisticsConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAvStatisticsConsumer.swift; sourceTree = "<group>"; };
+		2CA8B8A62A41D98100B2EC77 /* RailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailViewModel.swift; sourceTree = "<group>"; };
+		2CA8B8A82A41D99800B2EC77 /* RailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailView.swift; sourceTree = "<group>"; };
+		2CFA108C2A3B1C9C0023EF02 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		2CFA108E2A3B1CD20023EF02 /* Stations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stations.swift; sourceTree = "<group>"; };
+		2CFA10902A3B20B70023EF02 /* ListenViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenViewModelTest.swift; sourceTree = "<group>"; };
 		50DCFD8672F40A727D81B845 /* Pods-MiniSoundsChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniSoundsChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-MiniSoundsChallengeTests/Pods-MiniSoundsChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		54DBA18E852DEF8B5EAFD34F /* Pods-MiniSoundsChallenge-MiniSoundsChallengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniSoundsChallenge-MiniSoundsChallengeUITests.debug.xcconfig"; path = "Target Support Files/Pods-MiniSoundsChallenge-MiniSoundsChallengeUITests/Pods-MiniSoundsChallenge-MiniSoundsChallengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		68E57B500FD4079BCC71C117 /* Pods-MiniSoundsChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniSoundsChallenge.release.xcconfig"; path = "Target Support Files/Pods-MiniSoundsChallenge/Pods-MiniSoundsChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		6CC24EDC06C1BE23E079E0D4 /* Pods_MiniSoundsChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniSoundsChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71015D64E762E5F7F1CCD3DB /* Pods-MiniSoundsChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniSoundsChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-MiniSoundsChallengeTests/Pods-MiniSoundsChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		82B9825ABB9316D466E5FC41 /* Pods_MiniSoundsChallenge_MiniSoundsChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniSoundsChallenge_MiniSoundsChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		835C56562A38BB6A00E212D7 /* Notes.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Notes.md; sourceTree = "<group>"; };
 		96CB245EC7519C9360F29D8B /* Pods_MiniSoundsChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniSoundsChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA66ECA88F4D868C06EBBEFB /* Pods-MiniSoundsChallenge-MiniSoundsChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniSoundsChallenge-MiniSoundsChallengeUITests.release.xcconfig"; path = "Target Support Files/Pods-MiniSoundsChallenge-MiniSoundsChallengeUITests/Pods-MiniSoundsChallenge-MiniSoundsChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CE149238B155803B8AC20C04 /* Pods-MiniSoundsChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniSoundsChallenge.debug.xcconfig"; path = "Target Support Files/Pods-MiniSoundsChallenge/Pods-MiniSoundsChallenge.debug.xcconfig"; sourceTree = "<group>"; };
@@ -145,7 +174,11 @@
 		2C8B379B29B74D8400E1D5CF /* MiniSoundsChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				2C8B379C29B74D8400E1D5CF /* MiniSoundsChallengeTests.swift */,
+				2CFA10902A3B20B70023EF02 /* ListenViewModelTest.swift */,
+				2C8B379C29B74D8400E1D5CF /* HomeViewModelTests.swift */,
+				2C47291D2A4AC4F0005A06DB /* RailViewModelTests.swift */,
+				2C47291F2A4AC640005A06DB /* StubDataCreation.swift */,
+				2C4729212A4AE97D005A06DB /* PlaybackServiceTests.swift */,
 			);
 			path = MiniSoundsChallengeTests;
 			sourceTree = "<group>";
@@ -157,6 +190,50 @@
 				2C8B37A829B74D8400E1D5CF /* MiniSoundsChallengeUITestsLaunchTests.swift */,
 			);
 			path = MiniSoundsChallengeUITests;
+			sourceTree = "<group>";
+		};
+		2C93F80C2A3B01E000AD6A98 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2CA0F3332A333159005030F0 /* MyAvStatisticsConsumer.swift */,
+				2C6485952A3B56DB00FC629D /* RMSService.swift */,
+				2C93F8112A3B06F500AD6A98 /* ConfigService.swift */,
+				2C6485992A3C65D900FC629D /* PlaybackService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2CA8B8AA2A41DD2400B2EC77 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2C8B378D29B74D8300E1D5CF /* HomeView.swift */,
+				2C65FE7929D2EE1C00BDFF69 /* ListenPageView.swift */,
+				2CA8B8A82A41D99800B2EC77 /* RailView.swift */,
+				2C838A4D2A37592D007307A4 /* StationSquareView.swift */,
+				2C93E4872A4C811F00702105 /* InvalidConfigView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2CA8B8AB2A41DD3B00B2EC77 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2C82908B2A288E6400F33168 /* ListenPageViewModel.swift */,
+				2C838A4F2A375955007307A4 /* StationSquareViewModel.swift */,
+				2CA8B8A62A41D98100B2EC77 /* RailViewModel.swift */,
+				2C93F80F2A3B057E00AD6A98 /* HomeViewModel.swift */,
+				2C93E4892A4C814100702105 /* InvalidConfigViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2CFA108B2A3B1C920023EF02 /* DataAccess */ = {
+			isa = PBXGroup;
+			children = (
+				2CFA108C2A3B1C9C0023EF02 /* Config.swift */,
+				2CFA108E2A3B1CD20023EF02 /* Stations.swift */,
+			);
+			path = DataAccess;
 			sourceTree = "<group>";
 		};
 		4C5A1AB9BAD06CB1FED63CCA /* Pods */ = {
@@ -421,12 +498,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C65FE7A29D2EE1C00BDFF69 /* ListenPageView.swift in Sources */,
+				2C93F8102A3B057F00AD6A98 /* HomeViewModel.swift in Sources */,
+				2CFA108F2A3B1CD20023EF02 /* Stations.swift in Sources */,
+				2CA8B8A92A41D99800B2EC77 /* RailView.swift in Sources */,
 				2C838A4E2A37592D007307A4 /* StationSquareView.swift in Sources */,
-				2C8B378E29B74D8300E1D5CF /* ContentView.swift in Sources */,
+				2CA8B8A72A41D98100B2EC77 /* RailViewModel.swift in Sources */,
+				2CFA108D2A3B1C9C0023EF02 /* Config.swift in Sources */,
+				2C8B378E29B74D8300E1D5CF /* HomeView.swift in Sources */,
 				2CA0F3342A333159005030F0 /* MyAvStatisticsConsumer.swift in Sources */,
 				2C82908C2A288E6400F33168 /* ListenPageViewModel.swift in Sources */,
+				2C93E4882A4C811F00702105 /* InvalidConfigView.swift in Sources */,
 				2C8B378C29B74D8300E1D5CF /* MiniSoundsChallengeApp.swift in Sources */,
+				2C93E48A2A4C814100702105 /* InvalidConfigViewModel.swift in Sources */,
 				2C838A502A375955007307A4 /* StationSquareViewModel.swift in Sources */,
+				2C6485962A3B56DB00FC629D /* RMSService.swift in Sources */,
+				2C64859A2A3C65D900FC629D /* PlaybackService.swift in Sources */,
+				2C93F8122A3B06F500AD6A98 /* ConfigService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,7 +521,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C8B379D29B74D8400E1D5CF /* MiniSoundsChallengeTests.swift in Sources */,
+				2C47291E2A4AC4F0005A06DB /* RailViewModelTests.swift in Sources */,
+				2C8B379D29B74D8400E1D5CF /* HomeViewModelTests.swift in Sources */,
+				2C4729222A4AE97D005A06DB /* PlaybackServiceTests.swift in Sources */,
+				2C4729202A4AC640005A06DB /* StubDataCreation.swift in Sources */,
+				2C6485942A3B43EA00FC629D /* ListenViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
