@@ -150,14 +150,15 @@
 		2C8B378A29B74D8300E1D5CF /* MiniSoundsChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				835C56562A38BB6A00E212D7 /* Notes.md */,
-				2C8B378B29B74D8300E1D5CF /* MiniSoundsChallengeApp.swift */,
 				2C8B378F29B74D8400E1D5CF /* Assets.xcassets */,
-				2CFA108B2A3B1C920023EF02 /* DataAccess */,
+				2C8B378D29B74D8300E1D5CF /* ContentView.swift */,
+				2C65FE7929D2EE1C00BDFF69 /* ListenPageView.swift */,
+				2C82908B2A288E6400F33168 /* ListenPageViewModel.swift */,
+				2C8B378B29B74D8300E1D5CF /* MiniSoundsChallengeApp.swift */,
+				2CA0F3332A333159005030F0 /* MyAvStatisticsConsumer.swift */,
 				2C8B379129B74D8400E1D5CF /* Preview Content */,
-				2C93F80C2A3B01E000AD6A98 /* Services */,
-				2CA8B8AB2A41DD3B00B2EC77 /* ViewModels */,
-				2CA8B8AA2A41DD2400B2EC77 /* Views */,
+				2C838A4D2A37592D007307A4 /* StationSquareView.swift */,
+				2C838A4F2A375955007307A4 /* StationSquareViewModel.swift */,
 			);
 			path = MiniSoundsChallenge;
 			sourceTree = "<group>";
