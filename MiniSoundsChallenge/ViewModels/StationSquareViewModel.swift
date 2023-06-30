@@ -7,6 +7,7 @@
 
 import Foundation
 
+//TODO: This is more of a model than a view model - Rename StationSquare
 struct StationSquareViewModel {
     
     let id: String

@@ -10,12 +10,19 @@ import SwiftUI
 struct HomeView: View {
     
     @ObservedObject var viewModel: HomeViewModel
-    
+    //TODO: 
+    //let invalidConfigViewFactory: () -> InvalidConfigView
+    //let listenPageFactory: () -> ListenPageView
+
     var body: some View {
         switch viewModel.configResultState {
         case .valid(let config):
+            //TODO: Convert these into factory functions so they can be configured outside - e.g listenPageFactory: () -> ListenPageView
+            //TODO: To conform to SRP this view shouldn't be creating other views
             ListenPageView(listenPageViewModel: ListenPageViewModel(rmsLoading: RMSService(config: config), playbackService: PlaybackService()))
         case .invalid(let config):
+            //TODO: Convert these into factory functions so they can be configured outside - e.g invalidConfigViewFactory: () -> InvalidConfigView
+            //TODO: To conform to SRP this view shouldn't be creating other views
             InvalidConfigView(viewModel: InvalidConfigViewModel(
                 title: config.status.title,
                 message: config.status.message,

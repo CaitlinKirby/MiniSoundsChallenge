@@ -7,6 +7,7 @@
 
 import Foundation
 
+//TODO: This is more of a model than a view model - Rename InvalidConfig
 struct InvalidConfigViewModel {
     let title: String
     let message: String
