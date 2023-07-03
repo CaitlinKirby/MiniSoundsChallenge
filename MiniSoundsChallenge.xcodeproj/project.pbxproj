@@ -28,9 +28,9 @@
 		2C9EB6152A4D8B2600A54233 /* MyAvStatisticsConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EB5FF2A4D8B2500A54233 /* MyAvStatisticsConsumer.swift */; };
 		2C9EB6162A4D8B2600A54233 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EB6012A4D8B2500A54233 /* HomeViewModel.swift */; };
 		2C9EB6172A4D8B2600A54233 /* ListenPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EB6022A4D8B2500A54233 /* ListenPageViewModel.swift */; };
-		2C9EB6182A4D8B2600A54233 /* StationSquareViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EB6032A4D8B2500A54233 /* StationSquareViewModel.swift */; };
+		2C9EB6182A4D8B2600A54233 /* StationSquareModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EB6032A4D8B2500A54233 /* StationSquareModel.swift */; };
 		2C9EB6192A4D8B2600A54233 /* RailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EB6042A4D8B2500A54233 /* RailViewModel.swift */; };
-		2C9EB61A2A4D8B2600A54233 /* InvalidConfigViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EB6052A4D8B2500A54233 /* InvalidConfigViewModel.swift */; };
+		2C9EB61A2A4D8B2600A54233 /* InvalidConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EB6052A4D8B2500A54233 /* InvalidConfigModel.swift */; };
 		2C9EB61B2A4D8B2600A54233 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C9EB6062A4D8B2500A54233 /* Assets.xcassets */; };
 		2C9EB61C2A4D8B2600A54233 /* Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EB6082A4D8B2600A54233 /* Stations.swift */; };
 		2C9EB61D2A4D8B2600A54233 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EB6092A4D8B2600A54233 /* Config.swift */; };
@@ -86,9 +86,9 @@
 		2C9EB5FF2A4D8B2500A54233 /* MyAvStatisticsConsumer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAvStatisticsConsumer.swift; sourceTree = "<group>"; };
 		2C9EB6012A4D8B2500A54233 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		2C9EB6022A4D8B2500A54233 /* ListenPageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListenPageViewModel.swift; sourceTree = "<group>"; };
-		2C9EB6032A4D8B2500A54233 /* StationSquareViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationSquareViewModel.swift; sourceTree = "<group>"; };
+		2C9EB6032A4D8B2500A54233 /* StationSquareModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationSquareModel.swift; sourceTree = "<group>"; };
 		2C9EB6042A4D8B2500A54233 /* RailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailViewModel.swift; sourceTree = "<group>"; };
-		2C9EB6052A4D8B2500A54233 /* InvalidConfigViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvalidConfigViewModel.swift; sourceTree = "<group>"; };
+		2C9EB6052A4D8B2500A54233 /* InvalidConfigModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvalidConfigModel.swift; sourceTree = "<group>"; };
 		2C9EB6062A4D8B2500A54233 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C9EB6082A4D8B2600A54233 /* Stations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stations.swift; sourceTree = "<group>"; };
 		2C9EB6092A4D8B2600A54233 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -136,6 +136,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C4469832A52D4FA00C67B0D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2C9EB6052A4D8B2500A54233 /* InvalidConfigModel.swift */,
+				2C9EB6032A4D8B2500A54233 /* StationSquareModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		2C8B377F29B74D8300E1D5CF = {
 			isa = PBXGroup;
 			children = (
@@ -192,10 +201,11 @@
 		2C9EB5EE2A4D8A7400A54233 /* MiniSoundsChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				2C9EB5F22A4D8B2400A54233 /* Notes.md */,
+				2C9EB5F12A4D8B2400A54233 /* MiniSoundsChallengeApp.swift */,
 				2C9EB6062A4D8B2500A54233 /* Assets.xcassets */,
 				2C9EB6072A4D8B2600A54233 /* DataAccess */,
-				2C9EB5F12A4D8B2400A54233 /* MiniSoundsChallengeApp.swift */,
-				2C9EB5F22A4D8B2400A54233 /* Notes.md */,
+				2C4469832A52D4FA00C67B0D /* Models */,
 				2C9EB5F32A4D8B2500A54233 /* Preview Content */,
 				2C9EB5FB2A4D8B2500A54233 /* Services */,
 				2C9EB6002A4D8B2500A54233 /* ViewModels */,
@@ -240,9 +250,7 @@
 			children = (
 				2C9EB6012A4D8B2500A54233 /* HomeViewModel.swift */,
 				2C9EB6022A4D8B2500A54233 /* ListenPageViewModel.swift */,
-				2C9EB6032A4D8B2500A54233 /* StationSquareViewModel.swift */,
 				2C9EB6042A4D8B2500A54233 /* RailViewModel.swift */,
-				2C9EB6052A4D8B2500A54233 /* InvalidConfigViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -520,7 +528,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C9EB6142A4D8B2600A54233 /* RMSService.swift in Sources */,
-				2C9EB6182A4D8B2600A54233 /* StationSquareViewModel.swift in Sources */,
+				2C9EB6182A4D8B2600A54233 /* StationSquareModel.swift in Sources */,
 				2C9EB6162A4D8B2600A54233 /* HomeViewModel.swift in Sources */,
 				2C9EB6132A4D8B2600A54233 /* PlaybackService.swift in Sources */,
 				2C9EB61D2A4D8B2600A54233 /* Config.swift in Sources */,
@@ -535,7 +543,7 @@
 				2C9EB6112A4D8B2600A54233 /* InvalidConfigView.swift in Sources */,
 				2C9EB6102A4D8B2600A54233 /* StationSquareView.swift in Sources */,
 				2C9EB61C2A4D8B2600A54233 /* Stations.swift in Sources */,
-				2C9EB61A2A4D8B2600A54233 /* InvalidConfigViewModel.swift in Sources */,
+				2C9EB61A2A4D8B2600A54233 /* InvalidConfigModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

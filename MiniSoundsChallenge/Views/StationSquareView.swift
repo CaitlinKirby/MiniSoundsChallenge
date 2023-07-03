@@ -9,25 +9,25 @@ import SwiftUI
 
 struct StationSquareView: View {
     
-    private let viewModel: StationSquareViewModel
+    private let model: StationSquareModel
     
-    init(viewModel: StationSquareViewModel) {
-        self.viewModel = viewModel
+    init(viewModel: StationSquareModel) {
+        self.model = viewModel
     }
     
     var body: some View {
         VStack {
-            RadioIcon(imageUrl: viewModel.imageUrl)
-            Text(viewModel.title)
+            RadioIcon(imageUrl: model.imageUrl)
+            Text(model.title)
                 .font(.title3)
                 .frame(maxWidth: 150, minHeight: 50, maxHeight: 75)
                 .multilineTextAlignment(.center)
-            Text(viewModel.subtitle)
+            Text(model.subtitle)
                 .font(.system(size:15))
                 .frame(maxWidth: 150, minHeight: 50)
                 .padding(.bottom, 20)
         }
-        .accessibilityLabel(Text("\(viewModel.title).  \(viewModel.subtitle)"))
+        .accessibilityLabel(Text("\(model.title).  \(model.subtitle)"))
     }
 }
 

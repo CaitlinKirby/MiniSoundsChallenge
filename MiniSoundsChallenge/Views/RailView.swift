@@ -19,7 +19,7 @@ struct RailView: View {
             ScrollView(.horizontal) {
                 HStack {
                     ForEach(viewModel.stations, id: \.id) { station in
-                        StationSquareView(viewModel: StationSquareViewModel(
+                        StationSquareView(viewModel: StationSquareModel(
                             id: station.id,
                             title: station.titles.primary,
                             subtitle: station.synopses.short,

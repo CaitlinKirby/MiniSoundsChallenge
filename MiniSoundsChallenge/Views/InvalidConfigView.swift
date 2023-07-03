@@ -9,13 +9,13 @@ import SwiftUI
 
 struct InvalidConfigView: View {
     
-    var viewModel: InvalidConfigViewModel
+    var model: InvalidConfigModel
     
     var body: some View {
-        Text(viewModel.title)
+        Text(model.title)
             .font(.title)
-        Text(viewModel.message)
+        Text(model.message)
             .font(.body)
-        Link(viewModel.linkTitle, destination: viewModel.updateLink)
+        Link(model.linkTitle, destination: model.updateLink)
     }
 }

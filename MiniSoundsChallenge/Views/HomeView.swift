@@ -23,7 +23,7 @@ struct HomeView: View {
         case .invalid(let config):
             //TODO: Convert these into factory functions so they can be configured outside - e.g invalidConfigViewFactory: () -> InvalidConfigView
             //TODO: To conform to SRP this view shouldn't be creating other views
-            InvalidConfigView(viewModel: InvalidConfigViewModel(
+            InvalidConfigView(model: InvalidConfigModel(
                 title: config.status.title,
                 message: config.status.message,
                 linkTitle: config.status.linkTitle,
