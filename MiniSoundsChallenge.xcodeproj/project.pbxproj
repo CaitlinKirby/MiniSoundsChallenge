@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C4469862A52DD1500C67B0D /* PlaybackRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4469852A52DD1500C67B0D /* PlaybackRepository.swift */; };
+		2C4469892A52FE6500C67B0D /* ListenPageViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4469882A52FE6500C67B0D /* ListenPageViewFactory.swift */; };
+		2C44698D2A5303AE00C67B0D /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C44698C2A5303AE00C67B0D /* TestHelper.swift */; };
 		2C47291E2A4AC4F0005A06DB /* RailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C47291D2A4AC4F0005A06DB /* RailViewModelTests.swift */; };
-		2C4729202A4AC640005A06DB /* StubDataCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C47291F2A4AC640005A06DB /* StubDataCreation.swift */; };
 		2C4729222A4AE97D005A06DB /* PlaybackServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4729212A4AE97D005A06DB /* PlaybackServiceTests.swift */; };
 		2C6485942A3B43EA00FC629D /* ListenViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA10902A3B20B70023EF02 /* ListenViewModelTest.swift */; };
 		2C8B379D29B74D8400E1D5CF /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B379C29B74D8400E1D5CF /* HomeViewModelTests.swift */; };
@@ -57,8 +59,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C4469852A52DD1500C67B0D /* PlaybackRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackRepository.swift; sourceTree = "<group>"; };
+		2C4469882A52FE6500C67B0D /* ListenPageViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenPageViewFactory.swift; sourceTree = "<group>"; };
+		2C44698C2A5303AE00C67B0D /* TestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
 		2C47291D2A4AC4F0005A06DB /* RailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailViewModelTests.swift; sourceTree = "<group>"; };
-		2C47291F2A4AC640005A06DB /* StubDataCreation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubDataCreation.swift; sourceTree = "<group>"; };
 		2C4729212A4AE97D005A06DB /* PlaybackServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackServiceTests.swift; sourceTree = "<group>"; };
 		2C6485952A3B56DB00FC629D /* RMSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMSService.swift; sourceTree = "<group>"; };
 		2C6485992A3C65D900FC629D /* PlaybackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackService.swift; sourceTree = "<group>"; };
@@ -145,6 +149,30 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		2C4469842A52D9AB00C67B0D /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				2C4469852A52DD1500C67B0D /* PlaybackRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		2C4469872A52FE5000C67B0D /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				2C4469882A52FE6500C67B0D /* ListenPageViewFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		2C44698A2A53033E00C67B0D /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				2C44698C2A5303AE00C67B0D /* TestHelper.swift */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
 		2C8B377F29B74D8300E1D5CF = {
 			isa = PBXGroup;
 			children = (
@@ -163,10 +191,10 @@
 		2C8B379B29B74D8400E1D5CF /* MiniSoundsChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				2C44698A2A53033E00C67B0D /* Stubs */,
 				2CFA10902A3B20B70023EF02 /* ListenViewModelTest.swift */,
 				2C8B379C29B74D8400E1D5CF /* HomeViewModelTests.swift */,
 				2C47291D2A4AC4F0005A06DB /* RailViewModelTests.swift */,
-				2C47291F2A4AC640005A06DB /* StubDataCreation.swift */,
 				2C4729212A4AE97D005A06DB /* PlaybackServiceTests.swift */,
 			);
 			path = MiniSoundsChallengeTests;
@@ -201,6 +229,8 @@
 		2C9EB5EE2A4D8A7400A54233 /* MiniSoundsChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				2C4469872A52FE5000C67B0D /* Factories */,
+				2C4469842A52D9AB00C67B0D /* Repositories */,
 				2C9EB5F22A4D8B2400A54233 /* Notes.md */,
 				2C9EB5F12A4D8B2400A54233 /* MiniSoundsChallengeApp.swift */,
 				2C9EB6062A4D8B2500A54233 /* Assets.xcassets */,
@@ -530,6 +560,7 @@
 				2C9EB6142A4D8B2600A54233 /* RMSService.swift in Sources */,
 				2C9EB6182A4D8B2600A54233 /* StationSquareModel.swift in Sources */,
 				2C9EB6162A4D8B2600A54233 /* HomeViewModel.swift in Sources */,
+				2C4469892A52FE6500C67B0D /* ListenPageViewFactory.swift in Sources */,
 				2C9EB6132A4D8B2600A54233 /* PlaybackService.swift in Sources */,
 				2C9EB61D2A4D8B2600A54233 /* Config.swift in Sources */,
 				2C9EB6192A4D8B2600A54233 /* RailViewModel.swift in Sources */,
@@ -537,6 +568,7 @@
 				2C9EB60D2A4D8B2600A54233 /* RailView.swift in Sources */,
 				2C9EB60F2A4D8B2600A54233 /* ListenPageView.swift in Sources */,
 				2C9EB6122A4D8B2600A54233 /* ConfigService.swift in Sources */,
+				2C4469862A52DD1500C67B0D /* PlaybackRepository.swift in Sources */,
 				2C9EB60A2A4D8B2600A54233 /* MiniSoundsChallengeApp.swift in Sources */,
 				2C9EB6172A4D8B2600A54233 /* ListenPageViewModel.swift in Sources */,
 				2C9EB6152A4D8B2600A54233 /* MyAvStatisticsConsumer.swift in Sources */,
@@ -554,7 +586,7 @@
 				2C47291E2A4AC4F0005A06DB /* RailViewModelTests.swift in Sources */,
 				2C8B379D29B74D8400E1D5CF /* HomeViewModelTests.swift in Sources */,
 				2C4729222A4AE97D005A06DB /* PlaybackServiceTests.swift in Sources */,
-				2C4729202A4AC640005A06DB /* StubDataCreation.swift in Sources */,
+				2C44698D2A5303AE00C67B0D /* TestHelper.swift in Sources */,
 				2C6485942A3B43EA00FC629D /* ListenViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

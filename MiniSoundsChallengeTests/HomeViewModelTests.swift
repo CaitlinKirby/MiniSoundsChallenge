@@ -44,7 +44,7 @@ final class HomeViewModelTests: XCTestCase {
         await homeViewModel.buttonTapped(isValid: false)
 
         let resultConfigResultState = await homeViewModel.configResultState
-        XCTAssertEqual(resultConfigResultState, .invalid)
+        XCTAssertEqual(resultConfigResultState, .invalid(configService.configToReturn))
     }
     
     private func createConfigToReturn(

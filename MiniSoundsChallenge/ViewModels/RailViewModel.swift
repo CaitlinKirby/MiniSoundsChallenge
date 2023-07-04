@@ -19,11 +19,7 @@ class RailViewModel: ObservableObject {
     }
     
     func tapped(stationID: String) {
-        if playbackService.contentPlaying && playbackService.currrentlyLoadedStationID == stationID {
-            playbackService.pause()
-        } else {
-            playbackService.play(stationID)
-        }
+        playbackService.playOrPause(stationID)
     }
     
 }

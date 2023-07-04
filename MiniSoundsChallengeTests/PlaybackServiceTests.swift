@@ -12,22 +12,24 @@ import XCTest
 final class PlaybackServiceTests: XCTestCase {
     
     var playbackService: PlaybackService!
+    var playbackRepository: PlaybackRepository!
     
     override func setUp() async throws {
-        playbackService = PlaybackService()
+        playbackRepository = TestHelper.Repositories.StubPlaybackRepository()
+        playbackService = PlaybackService(playbackRepository: playbackRepository)
     }
     
     func testPlay() {
         let stationID = "testID"
-        playbackService.play(stationID)
+        playbackService.playOrPause(stationID)
         XCTAssertEqual(playbackService.currrentlyLoadedStationID, stationID)
         XCTAssertTrue(playbackService.contentPlaying)
     }
     
     func testPause() {
         let stationID = "testID"
-        playbackService.play(stationID)
-        playbackService.pause()
+        playbackService.playOrPause(stationID)
+        playbackService.playOrPause(stationID)
         XCTAssertEqual(playbackService.currrentlyLoadedStationID, stationID)
         XCTAssertFalse(playbackService.contentPlaying)
     }
@@ -35,8 +37,8 @@ final class PlaybackServiceTests: XCTestCase {
     func testPlayOneItemThenPlayADifferentItem() {
         let firstID = "firstStationID"
         let secondID = "secondStationID"
-        playbackService.play(firstID)
-        playbackService.play(secondID)
+        playbackService.playOrPause(firstID)
+        playbackService.playOrPause(secondID)
         XCTAssertEqual(playbackService.currrentlyLoadedStationID, secondID)
         XCTAssertTrue(playbackService.contentPlaying)
     }

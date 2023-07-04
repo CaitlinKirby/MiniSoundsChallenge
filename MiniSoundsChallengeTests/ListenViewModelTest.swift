@@ -10,12 +10,12 @@ import XCTest
 final class ListenViewModelTest: XCTestCase {
     
     var rmsService: StubRMSService!
-    var playbackService: PlaybackService!
+    var playbackService: TestHelper.Services.StubPlaybackService!
     var listenPageViewModel: ListenPageViewModel!
-    var stubDataCreation: StubDataCreation!
+    var stubDataCreation: TestHelper.Data!
     
     internal override func setUp() async throws {
-        stubDataCreation = StubDataCreation()
+        stubDataCreation = TestHelper.Data()
         rmsService = StubRMSService(
             returnStations: stubDataCreation.createStubStationsToReturn(
                 data: [stubDataCreation.createStubModule(
@@ -26,7 +26,7 @@ final class ListenViewModelTest: XCTestCase {
                 )]
             )
         )
-        playbackService = PlaybackService()
+        playbackService = TestHelper.Services.StubPlaybackService()
         listenPageViewModel = await ListenPageViewModel(rmsLoading: rmsService, playbackService: playbackService)
     }
 
