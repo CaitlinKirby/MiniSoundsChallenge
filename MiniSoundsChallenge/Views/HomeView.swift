@@ -10,41 +10,45 @@ import SwiftUI
 struct HomeView: View {
     
     @ObservedObject var viewModel: HomeViewModel
-    //TODO: 
-    //let invalidConfigViewFactory: () -> InvalidConfigView
-    //let listenPageFactory: () -> ListenPageView
+    let invalidConfigViewFactory: (Config) -> InvalidConfigView
+    let listenPageFactory: (Config) -> ListenPageView
+    
+    init(viewModel: HomeViewModel, invalidConfigViewFactory: @escaping (Config) -> InvalidConfigView, listenPageFactory: @escaping (Config) -> ListenPageView) {
+        self.viewModel = viewModel
+        self.invalidConfigViewFactory = invalidConfigViewFactory
+        self.listenPageFactory = listenPageFactory
+    }
 
     var body: some View {
         switch viewModel.configResultState {
         case .valid(let config):
-            //TODO: Convert these into factory functions so they can be configured outside - e.g listenPageFactory: () -> ListenPageView
-            //TODO: To conform to SRP this view shouldn't be creating other views
-            ListenPageView(listenPageViewModel: ListenPageViewModel(rmsLoading: RMSService(config: config), playbackService: PlaybackService(playbackRepository: PlaybackSMP())))
+            listenPageFactory(config)
         case .invalid(let config):
-            //TODO: Convert these into factory functions so they can be configured outside - e.g invalidConfigViewFactory: () -> InvalidConfigView
-            //TODO: To conform to SRP this view shouldn't be creating other views
-            InvalidConfigView(model: InvalidConfigModel(
-                title: config.status.title,
-                message: config.status.message,
-                linkTitle: config.status.linkTitle,
-                updateLink: config.status.appStoreUrl)
-            )
+            invalidConfigViewFactory(config)
         case .unsuccessful:
-            Text("Wow we reached here when we sholn'dt have")
+            Text("Unsuccessful Load")
         case .notLoaded:
-            Button("Valid") {
-                Task {
-                    await viewModel.buttonTapped(isValid: true)
-                }
-            }.modifier(ButtonStyle(backgroundColour: .green))
-            Button("Invalid") {
-                Task {
-                    await viewModel.buttonTapped(isValid: false)
-                }
-            }.modifier(ButtonStyle(backgroundColour: .red))
+            ValidButton()
+            InvalidButton()
         }
-
-        
+    }
+    
+    @ViewBuilder
+    private func ValidButton() -> some View {
+        Button("Valid") {
+            Task {
+                await viewModel.buttonTapped(isValid: true)
+            }
+        }.modifier(ButtonStyle(backgroundColour: .green))
+    }
+    
+    @ViewBuilder
+    private func InvalidButton() -> some View {
+        Button("Invalid") {
+            Task {
+                await viewModel.buttonTapped(isValid: false)
+            }
+        }.modifier(ButtonStyle(backgroundColour: .red))
     }
     
     struct ButtonStyle: ViewModifier {
@@ -58,5 +62,4 @@ struct HomeView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 10))
         }
     }
-    
 }

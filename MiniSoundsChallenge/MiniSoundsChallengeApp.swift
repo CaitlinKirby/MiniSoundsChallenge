@@ -13,7 +13,12 @@ struct MiniSoundsChallengeApp: App {
         WindowGroup {
             let configService = ConfigService()
             let homeViewModel = HomeViewModel(configLoading: configService)
-            HomeView(viewModel: homeViewModel)
+            let viewFactory = ViewFactory()
+            HomeView(
+                viewModel: homeViewModel,
+                invalidConfigViewFactory: viewFactory.invalidConfigViewFactory,
+                listenPageFactory: viewFactory.listenPageViewFactory
+            )
         }
     }
 }
