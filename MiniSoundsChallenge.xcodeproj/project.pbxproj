@@ -12,6 +12,7 @@
 		2C4469902A55854100C67B0D /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C44698F2A55854100C67B0D /* ViewFactory.swift */; };
 		2C47291E2A4AC4F0005A06DB /* RailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C47291D2A4AC4F0005A06DB /* RailViewModelTests.swift */; };
 		2C4729222A4AE97D005A06DB /* PlaybackServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4729212A4AE97D005A06DB /* PlaybackServiceTests.swift */; };
+		2C58A0A72A56B3E9001604A3 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C58A0A62A56B3E9001604A3 /* NetworkRepository.swift */; };
 		2C6485942A3B43EA00FC629D /* ListenViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA10902A3B20B70023EF02 /* ListenViewModelTest.swift */; };
 		2C8B379D29B74D8400E1D5CF /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B379C29B74D8400E1D5CF /* HomeViewModelTests.swift */; };
 		2C8B37A729B74D8400E1D5CF /* MiniSoundsChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B37A629B74D8400E1D5CF /* MiniSoundsChallengeUITests.swift */; };
@@ -64,6 +65,7 @@
 		2C44698F2A55854100C67B0D /* ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFactory.swift; sourceTree = "<group>"; };
 		2C47291D2A4AC4F0005A06DB /* RailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailViewModelTests.swift; sourceTree = "<group>"; };
 		2C4729212A4AE97D005A06DB /* PlaybackServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackServiceTests.swift; sourceTree = "<group>"; };
+		2C58A0A62A56B3E9001604A3 /* NetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRepository.swift; sourceTree = "<group>"; };
 		2C6485952A3B56DB00FC629D /* RMSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMSService.swift; sourceTree = "<group>"; };
 		2C6485992A3C65D900FC629D /* PlaybackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackService.swift; sourceTree = "<group>"; };
 		2C8B379C29B74D8400E1D5CF /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				2C4469852A52DD1500C67B0D /* PlaybackRepository.swift */,
+				2C58A0A62A56B3E9001604A3 /* NetworkRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -565,6 +568,7 @@
 				2C9EB6192A4D8B2600A54233 /* RailViewModel.swift in Sources */,
 				2C9EB60E2A4D8B2600A54233 /* HomeView.swift in Sources */,
 				2C9EB60D2A4D8B2600A54233 /* RailView.swift in Sources */,
+				2C58A0A72A56B3E9001604A3 /* NetworkRepository.swift in Sources */,
 				2C9EB60F2A4D8B2600A54233 /* ListenPageView.swift in Sources */,
 				2C9EB6122A4D8B2600A54233 /* ConfigService.swift in Sources */,
 				2C4469862A52DD1500C67B0D /* PlaybackRepository.swift in Sources */,

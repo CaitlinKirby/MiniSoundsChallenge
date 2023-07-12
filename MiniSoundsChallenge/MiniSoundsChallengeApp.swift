@@ -7,17 +7,30 @@
 
 import SwiftUI
 
+
 @main
 struct MiniSoundsChallengeApp: App {
+    
+    let configService: ConfigService
+    let homeViewModel: HomeViewModel
+    let viewFactory: ViewFactory
+    let invalidConfigViewFactory: (Config) -> InvalidConfigView
+    let listenPageViewFactory: (Config) -> ListenPageView
+    
+    init() {
+        configService = ConfigService()
+        homeViewModel = HomeViewModel(configLoading: configService)
+        viewFactory = ViewFactory()
+        invalidConfigViewFactory = viewFactory.invalidConfigViewFactory
+        listenPageViewFactory = viewFactory.listenPageViewFactory
+    }
+
     var body: some Scene {
         WindowGroup {
-            let configService = ConfigService()
-            let homeViewModel = HomeViewModel(configLoading: configService)
-            let viewFactory = ViewFactory()
             HomeView(
                 viewModel: homeViewModel,
-                invalidConfigViewFactory: viewFactory.invalidConfigViewFactory,
-                listenPageFactory: viewFactory.listenPageViewFactory
+                invalidConfigViewFactory: invalidConfigViewFactory,
+                listenPageFactory: listenPageViewFactory
             )
         }
     }

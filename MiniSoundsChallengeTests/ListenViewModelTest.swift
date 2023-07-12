@@ -16,6 +16,8 @@ final class ListenViewModelTest: XCTestCase {
     
     internal override func setUp() async throws {
         stubDataCreation = TestHelper.Data()
+        let testURL = URL(string: "www.testurl.com")!
+        
         rmsService = StubRMSService(
             returnStations: stubDataCreation.createStubStationsToReturn(
                 data: [stubDataCreation.createStubModule(
@@ -24,7 +26,8 @@ final class ListenViewModelTest: XCTestCase {
                         synopses: stubDataCreation.createStubStationSynopses()
                     )]
                 )]
-            )
+            ),
+            url: testURL
         )
         playbackService = TestHelper.Services.StubPlaybackService()
         listenPageViewModel = await ListenPageViewModel(rmsLoading: rmsService, playbackService: playbackService)
@@ -72,11 +75,13 @@ class StubRMSService: RMSLoading {
     var invokedLoadData = false
     var invokedLoadDataCount = 0
     var returnStations: Stations
+    var url: URL
     
-    init(invokedLoadData: Bool = false, invokedLoadDataCount: Int = 0, returnStations: Stations) {
+    init(invokedLoadData: Bool = false, invokedLoadDataCount: Int = 0, returnStations: Stations, url: URL) {
         self.invokedLoadData = invokedLoadData
         self.invokedLoadDataCount = invokedLoadDataCount
         self.returnStations = returnStations
+        self.url = url
     }
 
     func loadData() async throws -> Stations {

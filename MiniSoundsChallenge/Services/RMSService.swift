@@ -8,15 +8,17 @@
 import Foundation
 
 struct RMSService: RMSLoading {
-    
-    var config: Config
-    var session = URLSession.shared
 
+    let networkRepository: NetworkRepository<Stations>
+    let url: URL
+    
+    init(url: URL) {
+        networkRepository = NetworkRepository<Stations>()
+        self.url = url
+    }
+    
     func loadData() async throws -> Stations {
-        let url = URL(string: "\(config.rmsConfig.rootUrl)\(config.rmsConfig.allStationsPath)")!
-        let (data, _) = try await session.data(from: url)
-        let decoder = JSONDecoder()
-        return try decoder.decode(Stations.self, from: data)
+        try await networkRepository.loadFromNetwork(url: url)
     }
 }
 

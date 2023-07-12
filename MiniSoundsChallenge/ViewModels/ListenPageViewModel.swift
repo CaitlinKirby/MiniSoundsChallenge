@@ -24,7 +24,6 @@ class ListenPageViewModel: ObservableObject {
     }
     
     func setupStationsData() async throws {
-        modules = try await self.rmsLoading.loadData().data
+        modules = try await rmsLoading.loadData().data
     }
-    
 }

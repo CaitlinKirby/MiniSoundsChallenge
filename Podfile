@@ -1,3 +1,4 @@
+inhibit_all_warnings!
 source 'git@github.com:bbc/map-ios-podspecs.git'
 
 target 'MiniSoundsChallenge' do

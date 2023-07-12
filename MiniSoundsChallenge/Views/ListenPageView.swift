@@ -32,5 +32,5 @@ struct ListenPageView: View {
             }
             
         }
-    }    
+    }
 }

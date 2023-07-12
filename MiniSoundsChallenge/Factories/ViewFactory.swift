@@ -7,7 +7,6 @@
 
 import Foundation
 
-@MainActor
 struct ViewFactory {
     func invalidConfigViewFactory(config: Config) -> InvalidConfigView {
         let model = InvalidConfigModel(
@@ -17,8 +16,10 @@ struct ViewFactory {
             updateLink: config.status.appStoreUrl)
         return InvalidConfigView(model: model)
     }
+    @MainActor
     func listenPageViewFactory(config: Config) -> ListenPageView {
-        let rmsLoading = RMSService(config: config)
+        let url = URL(string: "\(config.rmsConfig.rootUrl)\(config.rmsConfig.allStationsPath)")!
+        let rmsLoading = RMSService(url: url)
         let playbackService = PlaybackService(playbackRepository: PlaybackSMP())
         let viewModel = ListenPageViewModel(rmsLoading: rmsLoading, playbackService: playbackService)
         return ListenPageView(listenPageViewModel: viewModel)
